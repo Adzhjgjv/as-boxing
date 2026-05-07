@@ -90,7 +90,7 @@ export function Hero() {
     alt="King Of The Ring"
     width={90}
     height={90}
-    className="mx-auto -mb-6"
+    className="mx-auto -mt-4"
   />
 ) : (
   stat.value
