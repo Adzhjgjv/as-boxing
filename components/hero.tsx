@@ -67,12 +67,7 @@ export function Hero() {
               Book Your Session
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
-            <Link
-              href="#services"
-              className="border-2 border-foreground/20 text-foreground px-8 py-4 text-lg font-semibold uppercase tracking-wider hover:border-primary hover:text-primary transition-all duration-300 text-center"
-            >
-              Start Training Today
-            </Link>
+            
           </motion.div>
 
           {/* Stats */}
