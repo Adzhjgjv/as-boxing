@@ -84,11 +84,7 @@ export function Hero() {
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
                 <div className="text-5xl sm:text-6xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
-                  {stat.value === "KOTR" ? (
-  
-) : (
-  stat.value
-)}
+                  {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wider mt-3 text-center">
                   {stat.label}
