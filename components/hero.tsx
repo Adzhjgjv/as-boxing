@@ -30,7 +30,6 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block text-primary font-semibold uppercase tracking-[0.3em] text-sm mb-6">
-              Belvedere, Bexley, London
             </span>
           </motion.div>
 
