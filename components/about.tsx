@@ -55,10 +55,10 @@ export function About() {
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary p-6 sm:p-8">
               <div className="text-4xl sm:text-5xl font-bold text-primary-foreground" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
-                10+
+                30+
               </div>
               <div className="text-sm uppercase tracking-wider text-primary-foreground/80">
-                Years Experience
+                Fights Experience
               </div>
             </div>
           </motion.div>
@@ -80,14 +80,7 @@ export function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                AS Boxing & Fitness is a professional boxing and fitness coaching service led by an experienced 
-                competitive boxer who actively competes at the highest level. With multiple championship titles 
-                and years of dedicated training, we bring real-world ring experience to every session.
-              </p>
-              <p>
-                Whether you&apos;re looking to learn authentic boxing skills, build unshakeable confidence, lose weight, 
-                or develop functional strength, our training programmes are designed to push you beyond your limits 
-                while ensuring proper technique and safety.
+               Train with an elite amateur boxer. Build real boxing skill, improve fitness, gain confidence, and push your limits through high-level personal coaching tailored to your goals.
               </p>
               <p className="text-foreground font-medium">
                 Sessions available in Belvedere, Bexley, London. Coaching delivered in both English and Polish.
