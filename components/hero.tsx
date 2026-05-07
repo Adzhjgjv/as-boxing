@@ -48,7 +48,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
+            className="text-lg sm:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed"
           >
             Train with a 3x London Champion and actively competing fighter. Build real boxing skill, elite fitness, and confidence through high-level personal training.
             <span className="text-foreground font-medium"> 3X London Champion</span> and 
