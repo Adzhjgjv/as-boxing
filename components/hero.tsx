@@ -86,7 +86,7 @@ export function Hero() {
                 <div className="text-5xl sm:text-6xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
                   {stat.value === "KOTR" ? (
   <Image
-    src="/redcdrown.png"
+    src="/crownnew.png"
     alt="King Of The Ring"
     width={90}
     height={90}
