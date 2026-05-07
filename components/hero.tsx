@@ -80,18 +80,12 @@ export function Hero() {
               { value: "3X", label: "London Champion" },
               { value: "#2", label: "in England 2023" },
               { value: "#3", label: "in Poland 2024" },
-              { value: "KOTR", label: "King Of The Ring" },
+              { value: "#1", label: "King Of The Ring" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
                 <div className="text-5xl sm:text-6xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
                   {stat.value === "KOTR" ? (
-  <Image
-    src="/crownnew.png"
-    alt="King Of The Ring"
-    width={90}
-    height={90}
-    className="mx-auto -mt-7"
-  />
+  
 ) : (
   stat.value
 )}
