@@ -50,7 +50,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Elite boxing coaching in Belvedere, London led by a 3x London Champion and actively competing fighter. Build real fitness, confidence, and boxing ability through high-level personal training.
+            Train with a 3x London Champion and actively competing fighter. Build real boxing skill, elite fitness, and confidence through high-level personal training.
             <span className="text-foreground font-medium"> 3X London Champion</span> and 
             <span className="text-foreground font-medium"> King of The Ring Champion</span>.
           </motion.p>
