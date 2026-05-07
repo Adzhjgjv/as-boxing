@@ -70,7 +70,7 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="text-primary font-semibold uppercase tracking-[0.3em] text-sm">
-              About Us
+              About 
             </span>
             <h2 
               className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
@@ -80,10 +80,10 @@ export function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-               Train with an elite amateur boxer. Build real boxing skill, improve fitness, gain confidence, and push your limits through high-level personal coaching tailored to your goals.
+               Train with an elite amateur boxer. Build real boxing skill, improve fitness, gain confidence and push your limits through high-level personal coaching tailored to your goals.
               </p>
               <p className="text-foreground font-medium">
-                Sessions available in Belvedere, Bexley, London. Coaching delivered in both English and Polish.
+                Sessions available in Belvedere, Bexley. Coaching delivered in both English and Polish.
               </p>
             </div>
 
