@@ -90,7 +90,7 @@ export function Hero() {
     alt="King Of The Ring"
     width={90}
     height={90}
-    className="mx-auto brightness-0 saturate-100 invert-[13%] sepia-[99%] saturate-[7482%] hue-rotate-[352deg] brightness-[97%] contrast-[119%]"
+    className="mx-auto -mb-4"
   />
 ) : (
   stat.value
