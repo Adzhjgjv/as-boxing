@@ -9,15 +9,15 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-       <video
+      <video
   autoPlay
   muted
   loop
   playsInline
-  className="w-full h-full object-cover"
+  className="absolute inset-0 w-full h-full object-cover"
 >
   <source src="/asboxingron.mp4" type="video/mp4" />
-</video>
+</video> 
         <div className="absolute inset-0 bg-black/15" />
       </div>
 
