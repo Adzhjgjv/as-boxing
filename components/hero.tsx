@@ -50,8 +50,7 @@ export function Hero() {
             className="text-lg sm:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed"
           >
             Train with a 3x London Champion and actively competing fighter. Build real boxing skill, elite fitness, and confidence through high-level personal training.
-            <span className="text-foreground font-medium"> 3X London Champion</span> and 
-            <span className="text-foreground font-medium"> King of The Ring Champion</span>.
+            
           </motion.p>
 
           <motion.div
