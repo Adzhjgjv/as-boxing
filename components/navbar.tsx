@@ -48,7 +48,7 @@ export function Navbar() {
               alt="AS Boxing & Fitness"
               width={140}
               height={120}
-              className="h-16 w-auto"
+              className="h-20 w-auto"
               priority
             />
           </Link>
