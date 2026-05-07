@@ -46,8 +46,8 @@ export function Navbar() {
             <Image
               src="/logo.png"
               alt="AS Boxing & Fitness"
-              width={120}
-              height={100}
+              width={140}
+              height={120}
               className="h-16 w-auto"
               priority
             />
