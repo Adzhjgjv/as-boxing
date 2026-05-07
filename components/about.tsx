@@ -13,9 +13,9 @@ const features = [
     description: "Learn authentic boxing techniques from an active competitor who applies these skills in the ring.",
   },
   {
-    icon: Target,
-    title: "Discipline & Confidence",
-    description: "Build mental strength, focus, and self-belief through structured training programmes.",
+    icon: BadgeCheck,
+    title: "Fully Qualified Coach",
+    description: "Fully certified boxing and fitness coach focused on safe, effective, and professional training for all levels.",
   },
   {
     icon: Dumbbell,
