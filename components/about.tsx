@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
-import { Shield, Target, Dumbbell, Users } from "lucide-react"
+import { Shield, BadgeCheck, Dumbbell, Users } from "lucide-react"
 
 const features = [
   {
