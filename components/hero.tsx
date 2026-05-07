@@ -11,7 +11,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1920&q=80"
+          src="/image.png"
           alt="Boxing training in action"
           fill
           className="object-cover"
