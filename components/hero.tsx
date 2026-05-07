@@ -80,10 +80,10 @@ export function Hero() {
               { value: "3X", label: "London Champion" },
               { value: "#2", label: "in England 2023" },
               { value: "#3", label: "in Poland 2024" },
-              { value: "2", label: "Languages" },
+              { value: "♛", label: "King Of The Ring" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
-                <div className="text-3xl sm:text-4xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
+                <div className="text-5xl sm:text-6xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wider mt-1">
