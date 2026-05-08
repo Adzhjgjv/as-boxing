@@ -3,19 +3,20 @@
 import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-     <Image
-  src="/image.png"
-  alt="Boxing training in action"
-  fill
-  className="object-cover object-right"
-  priority
-/>  
+     <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="absolute inset-0 w-full h-full object-cover"
+>
+  <source src="/asboxingron.mp4" type="video/mp4" />
+</video> 
         <div className="absolute inset-0 bg-black/15" />
       </div>
 
