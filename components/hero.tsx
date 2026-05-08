@@ -48,7 +48,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed"
           >
-            Train with a 3x London Champion. Build real boxing skill, elite fitness, and confidence through elite-level personal training.
+            Train with a 3x London Champion. Build real boxing skill, elite fitness, and confidence through top-level personal training.
             
           </motion.p>
 
