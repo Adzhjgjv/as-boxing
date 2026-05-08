@@ -45,12 +45,15 @@ export function About() {
             className="relative"
           >
             <div className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1517438476312-10d79c077509?w=800&q=80"
-                alt="Boxing coach in training"
-                fill
-                className="object-cover"
-              />
+              <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full h-full object-cover"
+>
+  <source src="/hero-video.mp4.mp4" type="video/mp4" />
+</video>
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary p-6 sm:p-8">
