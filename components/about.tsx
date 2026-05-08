@@ -10,12 +10,12 @@ const features = [
   {
     icon: Shield,
     title: "Real Boxing Knowledge",
-    description: "Learn authentic boxing techniques from an active competitor who applies these skills in the ring.",
+    description: "Learn the latest boxing techniques from an actively competing boxer.",
   },
   {
     icon: BadgeCheck,
     title: "Fully Qualified Coach",
-    description: "Fully certified boxing and fitness coach focused on safe, effective, and professional training for all levels.",
+    description: "Fully certified boxing and fitness coach, focused on effective training for all levels.",
   },
   {
     icon: Dumbbell,
@@ -86,7 +86,8 @@ export function About() {
                Train with an elite amateur boxer. Build real boxing skill, improve fitness, gain confidence and push your limits through high-level personal coaching tailored to your goals.
               </p>
               <p className="text-foreground font-medium">
-                Sessions available in Belvedere, Bexley. Coaching delivered in both English and Polish.
+                Sessions available in Belvedere, Bexley. 
+                Coaching delivered in both English and Polish.
               </p>
             </div>
 
