@@ -86,7 +86,7 @@ export function About() {
                Train with an elite amateur boxer. Build real boxing skill, improve fitness, gain confidence and push your limits through high-level personal coaching tailored to your goals.
               </p>
               <p className="text-foreground font-medium">
-                Sessions available in Belvedere, Bexley. 
+                Sessions available in Belvedere Boxing Club, Bexley. 
                 Coaching delivered in both English and Polish.
               </p>
             </div>
