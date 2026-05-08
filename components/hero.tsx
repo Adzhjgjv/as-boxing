@@ -38,8 +38,8 @@ export function Hero() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight leading-none mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
-            Train Like a
-            <span className="block text-primary">Champion</span>
+            Boxing Training
+            <span className="block text-primary">In Bexley</span>
           </motion.h1>
 
           <motion.p
