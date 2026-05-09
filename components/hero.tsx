@@ -38,8 +38,8 @@ export function Hero() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight leading-none mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
-            Boxing Training
-            <span className="block text-primary">In Bexley</span>
+            Train Like a
+            <span className="block text-primary">Champion</span>
           </motion.h1>
 
           <motion.p
@@ -48,7 +48,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed"
           >
-            Train with a 3x London Champion. Build real boxing skill, elite fitness, and confidence through top-level personal training.
+            Elite Boxing Training in Belvedere, Bexley. Build real boxing skill, peak fitness and confidence through top-level personal training.
             
           </motion.p>
 
