@@ -83,7 +83,7 @@ export function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-               Train with an actively competing elite amateur boxer and learn the techniques, tactics, and conditioning used in today’s competitive fight game. 
+               Train with an elite amateur boxer - learn the techniques, tactics, and conditioning used in today’s competitive fight game. 
                Each session is tailored to you and your specific goals.
               </p>
               <p className="text-foreground font-medium">
