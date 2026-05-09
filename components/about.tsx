@@ -87,8 +87,10 @@ export function About() {
                Each session is tailored to you and your specific goals.
               </p>
               <p className="text-foreground font-medium">
-                Sessions available in Belvedere Boxing Club, Bexley. 
-                Coaching delivered in both English and Polish.
+                <>
+  <p>Sessions available in Belvedere Boxing Club, Bexley.</p>
+  <p className="mt-2">Coaching delivered in both English and Polish.</p>
+</>
               </p>
             </div>
 
