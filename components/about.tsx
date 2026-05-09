@@ -84,7 +84,7 @@ export function About() {
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                Train with an actively competing elite amateur boxer and learn the techniques, tactics, and conditioning used in today’s competitive fight game. 
-                Develop real boxing skill through high-level coaching tailored to your goals — whether you want to sharpen technique, improve fitness, build confidence, or push your limits.
+               Each session is tailored to you and your specific goals.
               </p>
               <p className="text-foreground font-medium">
                 Sessions available in Belvedere Boxing Club, Bexley. 
