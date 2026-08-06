@@ -43,8 +43,8 @@ export function Achievements() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1517438322307-e67111335449?w=1920&q=80"
-          alt="Boxing ring background"
+          src="/achievements-bg.jpg"
+          alt="Adam competing in the boxing ring"
           fill
           className="object-cover opacity-20"
         />

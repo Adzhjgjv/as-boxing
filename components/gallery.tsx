@@ -7,33 +7,33 @@ import Image from "next/image"
 
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80",
-    alt: "Boxing pad work session",
+    src: "/gallery-1.jpg",
+    alt: "Adam landing a punch in competition",
     className: "col-span-2 row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=600&q=80",
-    alt: "Boxing gloves close-up",
+    src: "/gallery-2.jpg",
+    alt: "Adam in his ring stance",
     className: "col-span-1 row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1517438322307-e67111335449?w=600&q=80",
-    alt: "Boxing ring training",
+    src: "/gallery-3.jpg",
+    alt: "Adam's hand raised after a win",
     className: "col-span-1 row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?w=600&q=80",
-    alt: "Gym environment",
+    src: "/gallery-4.jpg",
+    alt: "Adam and his coach at ringside",
     className: "col-span-1 row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
-    alt: "Fitness training",
+    src: "/gallery-5.jpg",
+    alt: "Sparring session in the gym",
     className: "col-span-1 row-span-1",
   },
   {
-    src: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
-    alt: "Strength conditioning",
+    src: "/gallery-6.jpg",
+    alt: "Adam sparring in the ring",
     className: "col-span-2 row-span-1",
   },
 ]
