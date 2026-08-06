@@ -13,7 +13,7 @@ const galleryImages = [
   },
   {
     src: "/gallery-2.jpg",
-    alt: "Adam in his ring stance",
+    alt: "Championship belt win with the coaching team",
     className: "col-span-1 row-span-1",
   },
   {
@@ -23,7 +23,7 @@ const galleryImages = [
   },
   {
     src: "/gallery-4.jpg",
-    alt: "Adam and his coach at ringside",
+    alt: "Adam and a clubmate with gold medals and their coach",
     className: "col-span-1 row-span-1",
   },
   {
@@ -33,7 +33,7 @@ const galleryImages = [
   },
   {
     src: "/gallery-6.jpg",
-    alt: "Adam sparring in the ring",
+    alt: "Adam's hand raised after an international bout",
     className: "col-span-2 row-span-1",
   },
 ]
