@@ -68,11 +68,10 @@ export function Contact() {
             className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
-            Start Your Journey
+            Let&apos;s Get Started
           </h2>
           <p className="text-muted-foreground text-lg">
-            Ready to train like a champion? Get in touch to book your first session 
-            or ask any questions about our coaching programmes.
+            Drop me a message, give me a call, or send a WhatsApp. I&apos;ll get back to you quickly and we can sort out your first session.
           </p>
         </motion.div>
 

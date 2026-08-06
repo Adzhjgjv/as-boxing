@@ -36,7 +36,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-muted-foreground text-sm mt-2">
-              Professional boxing coaching in Belvedere, Bexley, London.
+              1-to-1 boxing coaching in Belvedere, Bexley. Coached by an active competitor.
             </p>
           </div>
 

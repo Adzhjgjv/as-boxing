@@ -3,15 +3,15 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { 
-  Target, 
-  GraduationCap, 
-  Hand, 
-  Flame, 
-  Scale, 
-  Dumbbell, 
-  Users, 
-  Languages 
+import {
+  Target,
+  GraduationCap,
+  Hand,
+  Flame,
+  Scale,
+  Dumbbell,
+  Users,
+  Languages
 } from "lucide-react"
 import Link from "next/link"
 
@@ -19,42 +19,42 @@ const services = [
   {
     icon: Target,
     title: "1-to-1 Boxing Coaching",
-    description: "Personalised one-on-one training sessions tailored to your goals, skill level, and fitness.",
+    description: "Private sessions focused entirely on you — your technique, your fitness, your goals. No distractions, no waiting around.",
   },
   {
     icon: GraduationCap,
-    title: "Beginner Boxing Lessons",
-    description: "Learn the fundamentals of boxing in a supportive environment. No experience required.",
+    title: "Beginner Boxing",
+    description: "Never boxed before? I'll start you from scratch — stance, footwork, combinations — at a pace that works for you.",
   },
   {
     icon: Hand,
-    title: "Pad Work Sessions",
-    description: "Intensive pad work drills to sharpen your combinations, timing, and accuracy.",
+    title: "Pad Work",
+    description: "Proper pad work is where boxing really comes alive. We'll work on your speed, timing and accuracy every session.",
   },
   {
     icon: Flame,
     title: "Boxing Fitness",
-    description: "High-energy boxing workouts designed to improve cardiovascular health and endurance.",
+    description: "If you want a serious workout, boxing delivers. High-intensity rounds that push your cardio and leave you feeling it.",
   },
   {
     icon: Scale,
-    title: "Weight Loss Training",
-    description: "Burn calories and shed weight with boxing-based HIIT and conditioning programmes.",
+    title: "Weight Loss",
+    description: "Boxing burns serious calories. Combine that with the right structure and you'll see real changes in how you look and feel.",
   },
   {
     icon: Dumbbell,
     title: "Strength & Conditioning",
-    description: "Build functional strength, power, and athletic performance for boxing and life.",
+    description: "We don't just box. I'll build in conditioning work to make you stronger, faster and more durable.",
   },
   {
     icon: Users,
-    title: "Small Group Training",
-    description: "Train with friends or colleagues in motivating small group sessions.",
+    title: "Small Group Sessions",
+    description: "Train with a friend or two. Same quality coaching, split between you — great for motivation and keeping costs down.",
   },
   {
     icon: Languages,
     title: "Polish-Speaking Coaching",
-    description: "Professional boxing coaching available in Polish for native speakers.",
+    description: "Coaching available in Polish for anyone who prefers it. Trenujemy też po polsku.",
   },
 ]
 
@@ -73,17 +73,16 @@ export function Services() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-primary font-semibold uppercase tracking-[0.3em] text-sm">
-            What We Offer
+            What I Offer
           </span>
-          <h2 
+          <h2
             className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
-            Our Services
+            Training That Fits You
           </h2>
           <p className="text-muted-foreground text-lg">
-            From complete beginners to experienced boxers, we offer comprehensive training 
-            programmes designed to help you achieve your goals.
+            Every session is different depending on where you are and what you need. Here&apos;s what we can work on together.
           </p>
         </motion.div>
 
@@ -99,7 +98,7 @@ export function Services() {
               <div className="w-14 h-14 bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 
+              <h3
                 className="text-xl font-bold uppercase tracking-tight mb-3"
                 style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
               >

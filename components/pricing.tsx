@@ -64,8 +64,7 @@ export function Pricing() {
             Training Packages
           </h2>
           <p className="text-muted-foreground text-lg">
-            Simple, transparent pricing. No hidden fees — just expert coaching
-            built around your goals.
+            Straightforward pricing, no hidden extras. Pay per session or grab the bundle and save.
           </p>
         </motion.div>
 

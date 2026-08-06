@@ -28,7 +28,7 @@ const galleryImages = [
   },
   {
     src: "/gallery-5.jpg",
-    alt: "Sparring session in the gym",
+    alt: "Adam in a competitive bout",
     className: "col-span-1 row-span-1",
   },
   {
@@ -53,16 +53,16 @@ export function Gallery() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-primary font-semibold uppercase tracking-[0.3em] text-sm">
-            Training Gallery
+            In the Ring
           </span>
           <h2 
             className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
-            See the Action
+            The Journey So Far
           </h2>
           <p className="text-muted-foreground text-lg">
-            Get a glimpse of our training environment and what to expect from your sessions.
+            From local shows to international competitions — a look at some of the moments along the way.
           </p>
         </motion.div>
 

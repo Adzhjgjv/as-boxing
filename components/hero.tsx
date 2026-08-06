@@ -4,18 +4,19 @@ import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-<Image
-  src="/image.png"
-  alt="Boxing training in action"
-  fill
-  className="object-cover object-right"
-  priority
-/> 
+        <Image
+          src="/image.png"
+          alt="Adam boxing in competition"
+          fill
+          className="object-cover object-right"
+          priority
+        />
         <div className="absolute inset-0 bg-black/15" />
       </div>
 
@@ -28,6 +29,7 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block text-primary font-semibold uppercase tracking-[0.3em] text-sm mb-6">
+              1-to-1 Boxing Coaching · Belvedere, Bexley
             </span>
           </motion.div>
 
@@ -38,8 +40,8 @@ export function Hero() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight leading-none mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
-            Train Like a
-            <span className="block text-primary">Champion</span>
+            Real Boxing.
+            <span className="block text-primary">Real Results.</span>
           </motion.h1>
 
           <motion.p
@@ -48,8 +50,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg sm:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed"
           >
-            Elite Boxing Training in Belvedere, Bexley. Build real boxing skill, peak fitness and confidence through top-level personal training.
-            
+            Train with an active competitive boxer. Whether you&apos;re picking up gloves for the first time or looking to sharpen your game, every session is built around you.
           </motion.p>
 
           <motion.div
@@ -62,10 +63,9 @@ export function Hero() {
               href="#contact"
               className="bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 text-center inline-flex items-center justify-center gap-2 group"
             >
-              Book Your Session
+              Book Your First Session
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
-            
           </motion.div>
 
           {/* Stats */}
@@ -79,7 +79,7 @@ export function Hero() {
               { value: "3X", label: "London Champion" },
               { value: "#2", label: "in England 2023" },
               { value: "30+", label: "Fights Experience" },
-              { value: "#1", label: "King Of The Ring" },
+              { value: "#1", label: "King of the Ring" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
                 <div className="text-5xl sm:text-6xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>

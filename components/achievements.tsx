@@ -9,28 +9,28 @@ import Image from "next/image"
 const achievements = [
   {
     icon: Crown,
-    title: "3X London Champion",
-    description: "Three-time London boxing champion across multiple competitions.",
+    title: "3x London Champion",
+    description: "Won the London title three times across different competitions — not once, not twice.",
   },
   {
     icon: Trophy,
-    title: "King of The Ring Champion",
-    description: "Crowned champion in the prestigious King of The Ring tournament.",
+    title: "King of the Ring Champion",
+    description: "Took the title at the King of the Ring tournament, one of the most competitive events on the amateur circuit.",
   },
   {
     icon: Medal,
     title: "No.2 in England, 2023",
-    description: "Ranked second in England for the 2023 competitive season.",
+    description: "Ranked second in England in 2023 — competing against the best in the country.",
   },
   {
     icon: Medal,
     title: "No.3 in Poland, 2024",
-    description: "Achieved third place ranking in Poland for 2024.",
+    description: "Represented at international level in 2024, finishing third in Poland.",
   },
   {
     icon: Swords,
-    title: "Active Competitor",
-    description: "Currently competing at the highest level of amateur boxing.",
+    title: "Still Competing",
+    description: "I&apos;m not a retired coach — I&apos;m still in the ring. That keeps my coaching sharp and current.",
   },
 ]
 
@@ -62,15 +62,14 @@ export function Achievements() {
           <span className="text-primary font-semibold uppercase tracking-[0.3em] text-sm">
             Track Record
           </span>
-          <h2 
+          <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight mt-4 mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
             Proven in the <span className="text-primary">Ring</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            These aren&apos;t just titles — they&apos;re proof of dedication, discipline, and the 
-            relentless pursuit of excellence that we bring to every training session.
+            These aren&apos;t credentials on a wall — they&apos;re fights won, titles earned and lessons learned the hard way. That&apos;s what I bring to your training.
           </p>
         </motion.div>
 
@@ -86,13 +85,12 @@ export function Achievements() {
               }`}
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary/50 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-              
               <div className="flex items-start gap-4">
                 <div className="w-16 h-16 bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                   <achievement.icon className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <h3 
+                  <h3
                     className="text-xl font-bold uppercase tracking-tight mb-2"
                     style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
                   >

@@ -3,29 +3,28 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import Image from "next/image"
 import { Shield, BadgeCheck, Dumbbell, Users } from "lucide-react"
 
 const features = [
   {
     icon: Shield,
-    title: "Real Boxing Knowledge",
-    description: "Learn the latest boxing techniques from an actively competing boxer.",
+    title: "Coached by a Competitor",
+    description: "I still compete at a high level, so what I teach you is what actually works in the ring — not textbook theory.",
   },
   {
     icon: BadgeCheck,
-    title: "Fully Qualified Coach",
-    description: "Fully certified boxing and fitness coach, focused on effective training for all levels.",
+    title: "Qualified & Certified",
+    description: "Fully certified boxing and fitness coach. Every session is structured, safe and built around your goals.",
   },
   {
     icon: Dumbbell,
     title: "Fitness & Weight Loss",
-    description: "Transform your body with high-intensity boxing workouts designed to burn fat and build muscle.",
+    description: "Boxing is one of the best full-body workouts there is. Sessions are hard work, but you'll see the results fast.",
   },
   {
     icon: Users,
-    title: "Beginner Friendly",
-    description: "No experience needed. Every session is tailored to your skill level and fitness goals.",
+    title: "All Levels Welcome",
+    description: "Never thrown a punch before? No problem. I've coached complete beginners and competitive fighters alike.",
   },
 ]
 
@@ -37,7 +36,7 @@ export function About() {
     <section id="about" className="py-24 lg:py-32 bg-secondary/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
+          {/* Video */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -46,14 +45,14 @@ export function About() {
           >
             <div className="relative aspect-[4/5] overflow-hidden">
               <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="w-full h-full object-cover"
->
-  <source src="/hero-video.mp4.mp4" type="video/mp4" />
-</video>
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/hero-video.mp4.mp4" type="video/mp4" />
+              </video>
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary p-6 sm:p-8">
@@ -73,24 +72,23 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="text-primary font-semibold uppercase tracking-[0.3em] text-sm">
-              About 
+              About
             </span>
-            <h2 
+            <h2
               className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
               style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
             >
-              AS Boxing & Fitness
+              Adam Szymanski
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-               Train with an elite amateur boxer - learn the techniques, tactics, and conditioning used in today’s competitive fight game. 
-               Each session is tailored to you and your specific goals.
+                I&apos;m Adam — a 3x London Champion and active competitive boxer based in Belvedere, Bexley. I&apos;ve had over 30 fights and I&apos;m still competing, which means the coaching I give you is current, practical and grounded in real experience.
+              </p>
+              <p>
+                I started coaching because I wanted to share what I&apos;ve learned in the ring — not just the techniques, but the mindset and the work ethic that goes with it. Whether you want to get fit, lose weight, learn to box properly, or just do something different, I&apos;ll put together sessions that actually challenge you.
               </p>
               <p className="text-foreground font-medium">
-                Sessions available in Belvedere Boxing Club, Bexley.
-              </p>
-              <p className="text-foreground font-medium">
-                Coaching delivered in both English and Polish.
+                Based at Belvedere Boxing Club, Bexley. Coaching in English and Polish.
               </p>
             </div>
 
