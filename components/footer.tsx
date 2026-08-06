@@ -13,10 +13,10 @@ const footerLinks = [
 ]
 
 const socialLinks = [
-  { href: "https://instagram.com/asboxing", icon: Instagram, label: "Instagram" },
-  { href: "https://wa.me/447XXXXXXXX", icon: MessageCircle, label: "WhatsApp" },
-  { href: "tel:+447XXXXXXXX", icon: Phone, label: "Phone" },
-  { href: "mailto:info@asboxing.co.uk", icon: Mail, label: "Email" },
+  { href: "https://instagram.com/as.boxingfitness", icon: Instagram, label: "Instagram" },
+  { href: "https://wa.me/447946497738", icon: MessageCircle, label: "WhatsApp" },
+  { href: "tel:+447946497738", icon: Phone, label: "Phone" },
+  { href: "mailto:as.boxingfitness@icloud.com", icon: Mail, label: "Email" },
 ]
 
 export function Footer() {
