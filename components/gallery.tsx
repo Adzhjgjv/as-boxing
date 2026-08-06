@@ -79,15 +79,14 @@ export function Gallery() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative overflow-hidden group ${image.className}`}
+              className={`relative overflow-hidden group bg-black ${image.className}`}
             >
               <div className="relative w-full h-full min-h-[200px]">
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  style={{ objectPosition: image.focus === "top" ? "center top" : "center center" }}
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="object-contain group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
               </div>
