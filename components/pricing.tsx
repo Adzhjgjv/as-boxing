@@ -9,62 +9,34 @@ import Link from "next/link"
 const pricingPlans = [
   {
     name: "Single Session",
-    price: "£45",
+    price: "£50",
     period: "per session",
-    description: "Perfect for trying out our training or occasional sessions.",
+    description: "A full 1-to-1 coaching session — perfect for trying it out or training on a flexible schedule.",
     features: [
-      "60-minute session",
+      "60-minute 1-to-1 session",
       "Personalised coaching",
-      "Technique assessment",
-      "Fitness evaluation",
+      "Technique & fitness assessment",
       "Flexible scheduling",
+      "Suitable for all levels",
     ],
     popular: false,
+    cta: "Book a Session",
   },
   {
-    name: "Weekly Package",
-    price: "£150",
-    period: "per week",
-    description: "Commit to 4 sessions per week for maximum results.",
+    name: "5-Session Bundle",
+    price: "£200",
+    period: "5 sessions",
+    description: "Commit to your training and save. The best way to build real skill and see results fast.",
     features: [
-      "4 sessions per week",
+      "5 x 60-minute 1-to-1 sessions",
       "Structured training plan",
       "Progress tracking",
-      "Nutrition guidance",
       "Priority booking",
-      "WhatsApp support",
+      "WhatsApp support between sessions",
+      "Save £50 vs single sessions",
     ],
     popular: true,
-  },
-  {
-    name: "Monthly Plan",
-    price: "£499",
-    period: "per month",
-    description: "Our most comprehensive package for serious athletes.",
-    features: [
-      "Unlimited sessions",
-      "Custom training programme",
-      "Weekly progress reviews",
-      "Video analysis",
-      "Nutrition plan",
-      "24/7 support",
-      "Competition prep available",
-    ],
-    popular: false,
-  },
-  {
-    name: "Small Group",
-    price: "£25",
-    period: "per person",
-    description: "Train with friends in groups of 2-4 people.",
-    features: [
-      "60-minute session",
-      "2-4 participants",
-      "Group pad work",
-      "Fitness circuits",
-      "Team motivation",
-    ],
-    popular: false,
+    cta: "Get the Bundle",
   },
 ]
 
@@ -85,63 +57,67 @@ export function Pricing() {
           <span className="text-primary font-semibold uppercase tracking-[0.3em] text-sm">
             Investment
           </span>
-          <h2 
+          <h2
             className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
-            style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
+            style={{ fontFamily: "var(--font-oswald), sans-serif" }}
           >
             Training Packages
           </h2>
           <p className="text-muted-foreground text-lg">
-            Choose the package that fits your goals and commitment level. 
-            All packages include professional coaching from a competitive boxer.
+            Simple, transparent pricing. No hidden fees — just expert coaching
+            built around your goals.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative bg-card border p-8 ${
-                plan.popular 
-                  ? "border-primary" 
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className={`relative bg-card border p-8 flex flex-col ${
+                plan.popular
+                  ? "border-primary"
                   : "border-border hover:border-primary/50"
               } transition-all duration-300`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
-                  Most Popular
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground whitespace-nowrap">
+                  Best Value
                 </div>
               )}
 
-              <h3 
-                className="text-xl font-bold uppercase tracking-tight mb-2"
-                style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
+              <h3
+                className="text-2xl font-bold uppercase tracking-tight mb-2"
+                style={{ fontFamily: "var(--font-oswald), sans-serif" }}
               >
                 {plan.name}
               </h3>
 
               <div className="mb-4">
-                <span 
-                  className="text-4xl font-bold text-primary"
-                  style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
+                <span
+                  className="text-5xl font-bold text-primary"
+                  style={{ fontFamily: "var(--font-oswald), sans-serif" }}
                 >
                   {plan.price}
                 </span>
-                <span className="text-muted-foreground text-sm ml-2">{plan.period}</span>
+                <span className="text-muted-foreground text-sm ml-2">
+                  {plan.period}
+                </span>
               </div>
 
               <p className="text-muted-foreground text-sm mb-6">
                 {plan.description}
               </p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">{feature}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -154,11 +130,20 @@ export function Pricing() {
                     : "border border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 }`}
               >
-                Get Started
+                {plan.cta}
               </Link>
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center text-muted-foreground text-sm mt-10"
+        >
+          Small group sessions also available — get in touch for group pricing.
+        </motion.p>
       </div>
     </section>
   )

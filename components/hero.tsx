@@ -78,7 +78,7 @@ export function Hero() {
             {[
               { value: "3X", label: "London Champion" },
               { value: "#2", label: "in England 2023" },
-              { value: "#3", label: "in Poland 2024" },
+              { value: "30+", label: "Fights Experience" },
               { value: "#1", label: "King Of The Ring" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
