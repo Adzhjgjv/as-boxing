@@ -182,7 +182,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                  <p className="text-muted-foreground">Belvedere, Bexley, London</p>
+                  <p className="text-muted-foreground">66 Gilbert Rd, Belvedere, DA17 5DA</p>
                 </div>
               </div>
 
@@ -236,7 +236,7 @@ export function Contact() {
             {/* Map */}
             <div className="relative aspect-video bg-card border border-border overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19867.831595594147!2d0.13955!3d51.4841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ab5c6f8e0001%3A0x2c5e9e5e5b5b5b5b!2sBelvedere%2C%20London!5e0!3m2!1sen!2suk!4v1620000000000!5m2!1sen!2suk"
+                src="https://www.google.com/maps?q=66+Gilbert+Rd,+Belvedere,+DA17+5DA&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
