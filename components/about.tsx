@@ -78,7 +78,7 @@ export function About() {
               className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
               style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
             >
-              Adam Szymanski
+              Adam Sipika
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
