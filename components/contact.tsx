@@ -14,13 +14,41 @@ export function Contact() {
     phone: "",
     message: "",
   })
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
+  const [statusMessage, setStatusMessage] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! We will get back to you soon.")
-    setFormData({ name: "", email: "", phone: "", message: "" })
+    setStatus("sending")
+    setStatusMessage("")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        setStatus("error")
+        setStatusMessage(
+          data?.error ??
+            "Something went wrong. Please message us on WhatsApp instead."
+        )
+        return
+      }
+
+      setStatus("success")
+      setStatusMessage("Thanks for getting in touch — we'll reply as soon as possible.")
+      setFormData({ name: "", email: "", phone: "", message: "" })
+    } catch {
+      setStatus("error")
+      setStatusMessage(
+        "Something went wrong. Please message us on WhatsApp instead."
+      )
+    }
   }
 
   return (
@@ -97,7 +125,7 @@ export function Contact() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full bg-card border border-border px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors"
-                  placeholder="+44 7XXX XXX XXX"
+                  placeholder="07XXX XXXXXX"
                 />
               </div>
 
@@ -118,11 +146,24 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 flex items-center justify-center gap-2 group"
+                disabled={status === "sending"}
+                className="w-full bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
+                {status === "sending" ? "Sending..." : "Send Message"}
                 <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
+
+              {statusMessage && (
+                <p
+                  role="status"
+                  aria-live="polite"
+                  className={`text-sm ${
+                    status === "success" ? "text-primary" : "text-destructive"
+                  }`}
+                >
+                  {statusMessage}
+                </p>
+              )}
             </form>
           </motion.div>
 
@@ -151,7 +192,9 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <p className="text-muted-foreground">+44 7XXX XXX XXX</p>
+                  <a href="tel:+447946497738" className="text-muted-foreground hover:text-primary transition-colors">
+                    07946 497738
+                  </a>
                 </div>
               </div>
 
@@ -161,7 +204,9 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <p className="text-muted-foreground">info@asboxing.co.uk</p>
+                  <a href="mailto:as.boxingfitness@icloud.com" className="text-muted-foreground hover:text-primary transition-colors break-all">
+                    as.boxingfitness@icloud.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -169,7 +214,7 @@ export function Contact() {
             {/* Quick Contact Buttons */}
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://wa.me/447XXXXXXXX"
+                href="https://wa.me/447946497738"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 font-semibold uppercase tracking-wider text-sm hover:bg-[#25D366]/90 transition-colors"
@@ -178,7 +223,7 @@ export function Contact() {
                 WhatsApp
               </a>
               <a
-                href="https://instagram.com/asboxing"
+                href="https://instagram.com/as.boxingfitness"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white px-6 py-3 font-semibold uppercase tracking-wider text-sm hover:opacity-90 transition-opacity"
