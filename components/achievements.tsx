@@ -30,7 +30,7 @@ const achievements = [
   {
     icon: Swords,
     title: "Still Competing",
-    description: "I&apos;m not a retired coach — I&apos;m still in the ring. That keeps my coaching sharp and current.",
+    description: "I'm not a retired coach — I'm still in the ring. That keeps my coaching sharp and current.",
   },
 ]
 

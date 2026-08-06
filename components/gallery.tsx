@@ -66,7 +66,7 @@ export function Gallery() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[280px] gap-4">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
@@ -75,15 +75,13 @@ export function Gallery() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative overflow-hidden group ${image.className}`}
             >
-              <div className="relative w-full h-full min-h-[200px]">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
-              </div>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
             </motion.div>
           ))}
         </div>
