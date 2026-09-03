@@ -7,10 +7,11 @@ import { Pricing } from "@/components/pricing"
 import { Gallery } from "@/components/gallery"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { MobileBooking } from "@/components/mobile-booking"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pb-16 lg:pb-0">
       <Navbar />
       <Hero />
       <About />
@@ -20,6 +21,7 @@ export default function Home() {
       <Gallery />
       <Contact />
       <Footer />
+      <MobileBooking />
     </main>
   )
 }

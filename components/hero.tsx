@@ -14,21 +14,22 @@ export function Hero() {
           src="/image.png"
           alt="Adam boxing in competition"
           fill
-          className="object-cover object-right"
+          className="object-cover object-[78%_center] sm:object-right"
           priority
         />
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/65 sm:bg-black/20" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-28 sm:py-32">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block text-primary font-semibold uppercase tracking-[0.3em] text-sm mb-6">
+            <span             className="inline-block text-primary font-semibold uppercase tracking-[0.24em] sm:tracking-[0.3em] text-xs sm:text-sm mb-5 sm:mb-6"
+>
               1-to-1 Boxing Coaching · Belvedere, Bexley
             </span>
           </motion.div>
@@ -37,7 +38,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight leading-none mb-6"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight leading-none mb-5 sm:mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
             Real Boxing.
@@ -48,7 +49,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed"
+            className="text-base sm:text-xl text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed"
           >
             Train with an active competitive boxer. Whether you&apos;re picking up gloves for the first time or looking to sharpen your game, every session is built around you.
           </motion.p>
@@ -75,7 +76,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8"
+            className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8"
           >
             {[
               { value: "3X", label: "London Champion" },
@@ -84,10 +85,11 @@ export function Hero() {
               { value: "#1", label: "King of the Ring" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
-                <div className="text-5xl sm:text-6xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
+                                  <div className="text-4xl sm:text-6xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
+
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground uppercase tracking-wider mt-3 text-center">
+                <div className="text-xs sm:text-sm text-white/70 uppercase tracking-wider mt-2 sm:mt-3 text-center">
                   {stat.label}
                 </div>
               </div>
