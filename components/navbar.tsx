@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -76,12 +77,14 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="#contact"
+            <a
+              href={createWhatsAppLink(bookingMessages.general)}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-6 py-2.5 text-sm font-semibold uppercase tracking-wider hover:bg-primary/90 transition-colors"
             >
               Book Now
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -115,13 +118,15 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="#contact"
+              <a
+                href={createWhatsAppLink(bookingMessages.general)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold uppercase tracking-wider text-center hover:bg-primary/90 transition-colors mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book Now
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

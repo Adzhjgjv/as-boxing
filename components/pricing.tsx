@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { Check } from "lucide-react"
-import Link from "next/link"
+import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 const pricingPlans = [
   {
@@ -21,6 +21,7 @@ const pricingPlans = [
     ],
     popular: false,
     cta: "Book a Session",
+    bookingMessage: bookingMessages.singleSession,
   },
   {
     name: "5-Session Bundle",
@@ -37,6 +38,7 @@ const pricingPlans = [
     ],
     popular: true,
     cta: "Get the Bundle",
+    bookingMessage: bookingMessages.fiveSessionBundle,
   },
 ]
 
@@ -121,8 +123,10 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Link
-                href="#contact"
+              <a
+                href={createWhatsAppLink(plan.bookingMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block w-full py-3 text-center font-semibold uppercase tracking-wider text-sm transition-all duration-300 ${
                   plan.popular
                     ? "bg-primary text-primary-foreground hover:bg-primary/90"
@@ -130,7 +134,7 @@ export function Pricing() {
                 }`}
               >
                 {plan.cta}
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>

@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
-import Link from "next/link"
 import Image from "next/image"
+import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 export function Hero() {
   return (
@@ -59,13 +59,15 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Link
-              href="#contact"
+            <a
+              href={createWhatsAppLink(bookingMessages.firstSession)}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 text-center inline-flex items-center justify-center gap-2 group"
             >
               Book Your First Session
               <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </Link>
+            </a>
           </motion.div>
 
           {/* Stats */}

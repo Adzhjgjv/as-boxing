@@ -13,7 +13,7 @@ import {
   Users,
   Languages
 } from "lucide-react"
-import Link from "next/link"
+import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 const services = [
   {
@@ -117,13 +117,15 @@ export function Services() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-12"
         >
-          <Link
-            href="#contact"
+          <a
+            href={createWhatsAppLink(bookingMessages.general)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-lg font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all duration-300 group"
           >
             Book a Session
             <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>
