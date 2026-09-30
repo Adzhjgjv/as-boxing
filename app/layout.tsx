@@ -17,6 +17,9 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+    google: 'RGwJn_nuzhoUP61stizYxmHxLlEOorWBbO7PL_bXLlM',
+  },
   title: {
     default: 'Boxing Coach in Belvedere & Bexley | AS Boxing & Fitness',
     template: '%s | AS Boxing & Fitness',
