@@ -5,11 +5,12 @@ import Image from "next/image"
 import { Instagram, MessageCircle, Phone, Mail } from "lucide-react"
 
 const footerLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#achievements", label: "Achievements" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/boxing-coach-belvedere", label: "Boxing Coach" },
+  { href: "/#achievements", label: "Achievements" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 const socialLinks = [

@@ -8,10 +8,10 @@ import Image from "next/image"
 import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#achievements", label: "Results" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#achievements", label: "Results" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 export function Navbar() {
@@ -77,6 +77,12 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/boxing-coach-belvedere"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
+            >
+              Boxing Coach
+            </Link>
             <a
               href={createWhatsAppLink(bookingMessages.general)}
               target="_blank"
@@ -115,9 +121,16 @@ export function Navbar() {
                   className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {link.label}
-                </Link>
-              ))}
+                {link.label}
+              </Link>
+            ))}
+              <Link
+                href="/boxing-coach-belvedere"
+                className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Boxing Coach
+              </Link>
               <a
                 href={createWhatsAppLink(bookingMessages.general)}
                 target="_blank"

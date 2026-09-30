@@ -9,6 +9,8 @@ export const bookingMessages = {
     "Hi Adam, I’d like to book a boxing session. Please let me know your availability.",
   firstSession:
     "Hi Adam, I’d like to book my first 1-to-1 boxing session. Please let me know your availability.",
+  belvedereCoaching:
+    "Hi Adam, I’m interested in 1-to-1 boxing coaching in Belvedere. I’d like to ask about a first session and your availability.",
   singleSession:
     "Hi Adam, I’d like to book a single 60-minute 1-to-1 boxing session (£50). Please let me know your availability.",
   fiveSessionBundle:
