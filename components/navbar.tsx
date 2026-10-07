@@ -10,6 +10,7 @@ import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
+  { href: "/boxing-guides", label: "Guides" },
   { href: "/#achievements", label: "Results" },
   { href: "/#contact", label: "Contact" },
 ]

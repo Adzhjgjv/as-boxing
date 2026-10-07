@@ -8,6 +8,7 @@ const footerLinks = [
   { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
   { href: "/boxing-coach-belvedere", label: "Boxing Coach" },
+  { href: "/boxing-guides", label: "Boxing Guides" },
   { href: "/#achievements", label: "Achievements" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/#contact", label: "Contact" },
