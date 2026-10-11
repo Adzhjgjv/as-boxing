@@ -41,8 +41,8 @@ export function Hero() {
             className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight leading-none mb-5 sm:mb-6"
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
-            Real Boxing.
-            <span className="block text-primary">Real Results.</span>
+           Personal Trainer
+<span className="block text-primary">Belvedere</span>
           </motion.h1>
 
           <motion.p
