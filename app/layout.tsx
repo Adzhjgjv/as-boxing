@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     google: 'RGwJn_nuzhoUP61stizYxmHxLlEOorWBbO7PL_bXLlM',
   },
   title: {
-default: 'BEST Personal Trainer Belvedere - Boxing Training near me',
+default: 'BEST Personal Trainer Belvedere - if you’re looking for Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be',
     template: '%s | AS Boxing & Fitness',
   },
   description:
@@ -33,7 +33,7 @@ default: 'BEST Personal Trainer Belvedere - Boxing Training near me',
     type: 'website',
     url: siteUrl,
     siteName: 'AS Boxing & Fitness',
-   title: 'BEST Personal Trainer Belvedere - Boxing Training near me',
+  title: 'BEST Personal Trainer Belvedere - if you’re looking for Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be',
     description:
       '1-to-1 boxing coaching with active boxer and 3x London Champion Adam Sipika. Book a session in Belvedere, Bexley.',
     images: [
