@@ -6,12 +6,11 @@ import { Flame, GraduationCap, Target, Users } from "lucide-react"
 import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 const services = [
-  { icon: Target, title: "1-to-1 Coaching" },
-  { icon: GraduationCap, title: "Beginner Friendly" },
-  { icon: Flame, title: "Boxing Fitness" },
-  { icon: Users, title: "Train With a Friend" },
+  { icon: Target, title: "1-to-1 Boxing Training" },
+  { icon: GraduationCap, title: "Boxing for Beginners" },
+  { icon: Flame, title: "Boxing Fitness & Conditioning" },
+  { icon: Users, title: "2-to-1 Boxing Training" },
 ]
-
 export function Services() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -33,7 +32,7 @@ export function Services() {
             className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-4"
             style={{ fontFamily: "var(--font-oswald), sans-serif" }}
           >
-            Training That Fits <span className="text-primary">You</span>
+         1-to-1 Boxing Training &amp; <span className="text-primary">Boxing Fitness</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg">
             Personal boxing coaching for every level and every goal.
