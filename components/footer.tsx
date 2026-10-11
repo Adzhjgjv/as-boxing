@@ -39,7 +39,17 @@ export function Footer() {
             </Link>
             <p className="text-muted-foreground text-sm mt-2">
               1-to-1 boxing coaching in Belvedere, Bexley. Coached by an active competitor.
-            </p>
+            </p><address className="not-italic text-muted-foreground text-sm mt-4 space-y-1">
+  <p className="font-semibold text-foreground">
+    AS Boxing &amp; Fitness
+  </p>
+  <p>66 Gilbert Road, Belvedere, DA17 5DA</p>
+  <p>
+    <a href="tel:+447946497738" className="hover:text-primary">
+      07946 497738
+    </a>
+  </p>
+</address>
           </div>
 
           {/* Links */}
