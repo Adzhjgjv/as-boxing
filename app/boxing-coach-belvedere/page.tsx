@@ -11,7 +11,10 @@ import { bookingMessages, createWhatsAppLink } from '@/lib/whatsapp'
 const pageUrl = 'https://www.asboxingfitness.com/boxing-coach-belvedere'
 
 export const metadata: Metadata = {
-  title: 'Boxing Coach in Belvedere | 1-to-1 Training',
+  title: {
+    absolute:
+      "BEST Boxing Coach Belvedere - if you're looking for 1-to-1 Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be",
+  },
   description:
     'Private 1-to-1 boxing coaching in Belvedere, Bexley with active boxer and 3x London Champion Adam Sipika. Beginner-friendly 60-minute sessions from £50. Book on WhatsApp.',
   alternates: {
@@ -151,7 +154,7 @@ export default function BoxingCoachBelvederePage() {
               className="max-w-2xl text-5xl font-bold uppercase leading-[0.92] tracking-tight sm:text-6xl lg:text-7xl"
               style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
             >
-              Boxing coaching that is built around <span className="text-primary">you</span>.
+              Boxing Coach Belvedere
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
               Private 1-to-1 boxing coaching in Belvedere for beginners, fitness goals and technical development. Train with Adam Sipika — an active competitive boxer and 3x London Champion.
