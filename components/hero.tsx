@@ -51,7 +51,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base sm:text-xl text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed"
           >
-            AS Boxing &amp; Fitness provides one-to-one boxing coaching and boxing personal training for clients across Bexley, from Belvedere Boxing Club at 66 Gilbert Rd, Belvedere, DA17 5DA. Coaching is led by Adam Sipika, a 3x London Champion and active competitive boxer, in English and Polish. Sessions are in Belvedere, in the London Borough of Bexley — not a second gym in Bexley town.
+            AS Boxing &amp; Fitness provides one-to-one boxing coaching and boxing personal training for clients across Bexley, from Belvedere Boxing Club at 66 Gilbert Rd, Belvedere, DA17 5DA. Coaching is led by Adam Sipika, a 3x London Champion and active competitive boxer, in English and Polish.
           </motion.p>
 
           <motion.div
