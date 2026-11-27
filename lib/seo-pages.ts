@@ -372,7 +372,7 @@ export const seoPages: SeoPage[] = [
     ],
     takeaways: ['Ask before buying equipment.', 'Wraps are used for support inside gloves.', 'Fit and purpose matter more than branding.', 'Bring water and suitable trainers to a first session.'],
     faqs: [
-      { question: 'Do I need gloves for my first session?', answer: 'Ask before booking. your coach can confirm what is needed for your session.' },
+      { question: 'Do I need gloves for my first session?', answer: 'Ask before booking. Your coach can confirm what is needed for your session.' },
       { question: 'Can I share gloves?', answer: 'Follow the venue and coach guidance on hygiene and equipment availability.' },
     ],
     related: ['first-boxing-session', 'boxing-for-beginners-belvedere', 'boxing-warm-up'],
