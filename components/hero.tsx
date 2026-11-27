@@ -42,7 +42,7 @@ export function Hero() {
             style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
           >
            Personal Trainer
-<span className="block text-primary">Belvedere</span>
+<span className="block text-primary">Bexley</span>
           </motion.h1>
 
           <motion.p
@@ -51,7 +51,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base sm:text-xl text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed"
           >
-            Train with an active competitive boxer. Whether you&apos;re picking up gloves for the first time or looking to sharpen your game, every session is built around you.
+            AS Boxing &amp; Fitness provides one-to-one boxing coaching and boxing personal training for clients across Bexley, from Belvedere Boxing Club at 66 Gilbert Rd, Belvedere, DA17 5DA. Coaching is led by Adam Sipika, a 3x London Champion and active competitive boxer, in English and Polish.
           </motion.p>
 
           <motion.div

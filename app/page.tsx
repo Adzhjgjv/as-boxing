@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
 import { About } from '@/components/about'
@@ -9,6 +11,21 @@ import { Gallery } from '@/components/gallery'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
+
+const homepageTitle =
+  "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching near me, Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be"
+
+export const metadata: Metadata = {
+  title: {
+    absolute: homepageTitle,
+  },
+  openGraph: {
+    title: homepageTitle,
+  },
+  twitter: {
+    title: homepageTitle,
+  },
+}
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -40,6 +57,10 @@ const localBusinessSchema = {
     {
       '@type': 'AdministrativeArea',
       name: 'Bexley',
+    },
+    {
+      '@type': 'City',
+      name: 'Belvedere',
     },
     {
       '@type': 'City',
