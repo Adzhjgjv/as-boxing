@@ -253,7 +253,7 @@ export default async function SeoPage({ params }: PageProps) {
 
           <aside className="border border-border bg-card p-6 lg:sticky lg:top-32">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Private coaching</p>
-            <h2 className="mt-3 text-3xl font-bold uppercase leading-none" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>Train with your coach</h2>
+            <h2 className="mt-3 text-3xl font-bold uppercase leading-none" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>Train with Adam</h2>
             <p className="mt-4 leading-7 text-muted-foreground">1-to-1 boxing coaching at 66 Gilbert Rd, Belvedere, DA17 5DA. Beginner-friendly, appointment-based and available in English and Polish.</p>
             <dl className="mt-6 space-y-3 border-y border-border py-5 text-sm">
               <div className="flex items-start justify-between gap-4"><dt className="text-muted-foreground">Single session</dt><dd className="font-semibold">£50 / 60 min</dd></div>

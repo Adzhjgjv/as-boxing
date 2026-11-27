@@ -6,15 +6,15 @@ export function createWhatsAppLink(message: string) {
 
 export const bookingMessages = {
   general:
-    "Hi, I’d like to book a boxing session. Please let me know your availability.",
+    "Hi Adam, I’d like to book a boxing session. Please let me know your availability.",
   firstSession:
-    "Hi, I’d like to book my first 1-to-1 boxing session. Please let me know your availability.",
+    "Hi Adam, I’d like to book my first 1-to-1 boxing session. Please let me know your availability.",
   belvedereCoaching:
-    "Hi, I’m interested in 1-to-1 boxing coaching in Belvedere. I’d like to ask about a first session and your availability.",
+    "Hi Adam, I’m interested in 1-to-1 boxing coaching in Belvedere. I’d like to ask about a first session and your availability.",
   singleSession:
-    "Hi, I’d like to book a single 60-minute 1-to-1 boxing session (£50). Please let me know your availability.",
+    "Hi Adam, I’d like to book a single 60-minute 1-to-1 boxing session (£50). Please let me know your availability.",
   fiveSessionBundle:
-    "Hi, I’d like to book the 5-session bundle (£200). Please let me know how to get started.",
+    "Hi Adam, I’d like to book the 5-session bundle (£200). Please let me know how to get started.",
   twoToOne:
-    "Hi, I’d like to book a 2-to-1 boxing session (£70 per hour). Please let me know your availability.",
+    "Hi Adam, I’d like to book a 2-to-1 boxing session (£70 per hour). Please let me know your availability.",
 } as const

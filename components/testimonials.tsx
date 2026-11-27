@@ -17,25 +17,25 @@ const testimonials = [
   {
     name: "Akhilesh T.",
     content:
-      "An absolutely amazing coach who genuinely cares about students and is always committed to getting the very best out of them. … The sessions don't just cover boxing techniques; they focus on discipline, fitness, confidence, footwork, movement, technique and mental strength.",
+      "Adam is an absolutely amazing coach who genuinely cares about his students and is always committed to getting the very best out of them. … He doesn't just teach boxing techniques; he focuses on discipline, fitness, confidence, footwork, movement, technique and mental strength.",
     rating: 5,
   },
   {
     name: "Suzy C.",
     content:
-      "I have been having personal training boxing sessions with AS Boxing & Fitness. The coach is very professional in manner and very patient when you get it wrong a hundred times. The coaching comes from real boxing experience and training, spotting every little mistake. I can totally recommend it.",
+      "I have been having personal training boxing sessions with Adam, from AS Boxing & Fitness, he is very professional in his manner and very patient when you get it wrong a hundred times. He teaches from his own boxing experience and training, spotting every little mistake. I can totally recommend him.",
     rating: 5,
   },
   {
     name: "Marcin K.",
     content:
-      "Very good workout👍 this was my first ever boxing session and I'd definitely recommend. It wasn't just a fitness workout. I was taught proper technique and how to throw a punch with the correct form.",
+      "Very good workout👍 this was my first ever boxing session and I'd definitely recommend. It wasn't just a fitness workout, Adam taught me proper technique and how to throw a punch with the correct form.",
     rating: 5,
   },
   {
     name: "Euan B.",
     content:
-      "Great boxing session. I was really put through my paces whilst my technique was corrected throughout. Proper workout and would definitely recommend.",
+      "Great boxing session with Adam. He really put me through my paces whilst correcting my technique throughout. Proper workout and would definitely recommend.",
     rating: 5,
   },
   {
