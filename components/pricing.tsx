@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { Check } from "lucide-react"
+import Link from "next/link"
 import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 const pricingPlans = [
@@ -22,6 +23,8 @@ const pricingPlans = [
     popular: false,
     cta: "Book a Session",
     bookingMessage: bookingMessages.singleSession,
+    href: "/boxing-coaching-prices",
+    linkText: "a 60-minute 1-to-1 session",
   },
   {
     name: "5-Session Bundle",
@@ -39,6 +42,8 @@ const pricingPlans = [
     popular: true,
     cta: "Get the Bundle",
     bookingMessage: bookingMessages.fiveSessionBundle,
+    href: "/five-session-boxing-bundle",
+    linkText: "the five-session bundle",
   },
 ]
 
@@ -111,6 +116,13 @@ export function Pricing() {
               <p className="text-muted-foreground text-sm mb-6">
                 {plan.description}
               </p>
+
+              <Link
+                href={plan.href}
+                className="mb-6 inline-block text-sm font-semibold leading-snug text-muted-foreground transition-colors hover:text-primary"
+              >
+                {plan.linkText}
+              </Link>
 
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature) => (

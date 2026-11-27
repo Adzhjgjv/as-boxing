@@ -3,14 +3,41 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Flame, GraduationCap, Target, Users } from "lucide-react"
+import Link from "next/link"
 import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 const services = [
-  { icon: Target, title: "1-to-1 Boxing Training" },
-  { icon: GraduationCap, title: "Boxing for Beginners" },
-  { icon: Flame, title: "Boxing Fitness & Conditioning" },
-  { icon: Users, title: "2-to-1 Boxing Training" },
+  {
+    icon: Target,
+    title: "1-to-1 Boxing Training",
+    href: "/boxing-personal-trainer-bexley",
+    linkText: "a boxing personal trainer for Bexley clients",
+  },
+  {
+    icon: GraduationCap,
+    title: "Boxing for Beginners",
+    href: "/boxing-for-beginners-belvedere",
+    linkText: "boxing for beginners",
+  },
+  {
+    icon: Flame,
+    title: "Boxing Fitness & Conditioning",
+    href: "/boxing-fitness-belvedere",
+    linkText: "boxing fitness coaching",
+  },
+  {
+    icon: Users,
+    title: "2-to-1 Boxing Training",
+    href: "/private-boxing-training-bexley",
+    linkText: "private boxing training in Bexley",
+  },
 ]
+
+const areaLinks = [
+  { href: "/boxing-coach-bexley", label: "boxing coaching in Bexley" },
+  { href: "/boxing-coach-belvedere", label: "boxing coaching in Belvedere" },
+]
+
 export function Services() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -46,7 +73,7 @@ export function Services() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="group bg-card border border-border p-5 sm:p-6 text-center hover:border-primary/50 transition-all duration-300"
+              className="group relative bg-card border border-border p-5 sm:p-6 text-center hover:border-primary/50 transition-all duration-300"
             >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
@@ -57,9 +84,27 @@ export function Services() {
               >
                 {service.title}
               </h3>
+              <Link
+                href={service.href}
+                className="mt-3 inline-block text-sm font-semibold leading-snug text-muted-foreground transition-colors group-hover:text-primary after:absolute after:inset-0"
+              >
+                {service.linkText}
+              </Link>
             </motion.div>
           ))}
         </div>
+
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-6 text-muted-foreground sm:mt-10">
+          Areas we serve:{" "}
+          {areaLinks.map((link, index) => (
+            <span key={link.href}>
+              {index > 0 ? " · " : null}
+              <Link href={link.href} className="transition-colors hover:text-primary">
+                {link.label}
+              </Link>
+            </span>
+          ))}
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
