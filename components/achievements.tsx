@@ -22,7 +22,7 @@ export function Achievements() {
       <div className="absolute inset-0">
         <Image
           src="/achievements-bg.jpg"
-          alt="Adam competing in the boxing ring"
+          alt="Competing in the boxing ring"
           fill
           className="object-cover opacity-20"
         />

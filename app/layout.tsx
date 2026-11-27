@@ -25,7 +25,7 @@ default: "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching n
     template: '%s | AS Boxing & Fitness',
   },
   description:
-    '1-to-1 boxing coaching in Belvedere, Bexley with active boxer and 3x London Champion Adam Sipika. Beginner-friendly boxing, fitness and skills coaching. Book on WhatsApp.',
+    '1-to-1 boxing coaching in Belvedere, Bexley with an active competitive boxer and 3x London Champion. Beginner-friendly boxing, fitness and skills coaching. Book on WhatsApp.',
   alternates: {
     canonical: '/',
   },
@@ -35,13 +35,13 @@ default: "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching n
     siteName: 'AS Boxing & Fitness',
   title: "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching near me, Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be",
     description:
-      '1-to-1 boxing coaching with active boxer and 3x London Champion Adam Sipika. Book a session in Belvedere, Bexley.',
+      '1-to-1 boxing coaching with an active competitive boxer and 3x London Champion. Book a session in Belvedere, Bexley.',
     images: [
       {
         url: '/image.png',
         width: 1146,
         height: 572,
-        alt: 'Adam Sipika boxing in competition for AS Boxing & Fitness',
+        alt: 'Boxing in competition for AS Boxing & Fitness',
       },
     ],
   },
@@ -49,7 +49,7 @@ default: "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching n
     card: 'summary_large_image',
     title: "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching near me, Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be",
     description:
-      '1-to-1 boxing coaching with active boxer and 3x London Champion Adam Sipika.',
+      '1-to-1 boxing coaching with an active competitive boxer and 3x London Champion.',
     images: ['/image.png'],
   },
   robots: {

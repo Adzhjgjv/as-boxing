@@ -38,7 +38,7 @@ const localBusinessSchema = {
   image: 'https://www.asboxingfitness.com/image.png',
   logo: 'https://www.asboxingfitness.com/logo.png',
   description:
-    '1-to-1 boxing coaching in Belvedere, Bexley with active boxer and 3x London Champion Adam Sipika. Beginner-friendly boxing, fitness and skills coaching.',
+    '1-to-1 boxing coaching in Belvedere, Bexley with an active competitive boxer and 3x London Champion. Beginner-friendly boxing, fitness and skills coaching.',
   telephone: '+447946497738',
   email: 'as.boxingfitness@icloud.com',
   priceRange: '££',

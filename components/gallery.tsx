@@ -8,7 +8,7 @@ import Image from "next/image"
 const galleryImages = [
   {
     src: "/gallery-1.jpg",
-    alt: "Adam landing a punch in competition",
+    alt: "Landing a punch in competition",
     className: "col-span-2 row-span-2",
     focus: "center",
   },
@@ -20,13 +20,13 @@ const galleryImages = [
   },
   {
     src: "/gallery-3.jpg",
-    alt: "Adam's hand raised after a win",
+    alt: "A hand raised after a win",
     className: "col-span-1 row-span-1",
     focus: "top",
   },
   {
     src: "/gallery-4.jpg",
-    alt: "Adam and a clubmate with gold medals and their coach",
+    alt: "Two boxers with gold medals and their coach",
     className: "col-span-1 row-span-1",
     focus: "top",
   },
@@ -38,7 +38,7 @@ const galleryImages = [
   },
   {
     src: "/gallery-6.jpg",
-    alt: "Adam's hand raised after an international bout",
+    alt: "A hand raised after an international bout",
     className: "col-span-2 row-span-1",
     focus: "top",
   },

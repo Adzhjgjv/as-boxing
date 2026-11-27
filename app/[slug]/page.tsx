@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: '/image.png',
           width: 1146,
           height: 572,
-          alt: 'Adam Sipika boxing in competition for AS Boxing & Fitness',
+          alt: 'Boxing in competition for AS Boxing & Fitness',
         },
       ],
     },
@@ -131,7 +131,7 @@ export default async function SeoPage({ params }: PageProps) {
           mainEntityOfPage: pageUrl,
           datePublished: '2026-10-07',
           dateModified: '2026-10-07',
-          author: { '@type': 'Person', name: 'Adam Sipika' },
+          author: { '@type': 'Organization', name: 'AS Boxing & Fitness', url: 'https://www.asboxingfitness.com/' },
           publisher: { '@id': 'https://www.asboxingfitness.com/#business' },
           image: 'https://www.asboxingfitness.com/image.png',
         }
