@@ -6,6 +6,7 @@ import { Check, MapPin, MessageCircle, ShieldCheck, Target } from 'lucide-react'
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
 import { Navbar } from '@/components/navbar'
+import { professionalServiceSchema, servicesInArea } from '@/lib/local-seo'
 import { bookingMessages, createWhatsAppLink } from '@/lib/whatsapp'
 
 const pageUrl = 'https://www.asboxingfitness.com/boxing-coach-belvedere'
@@ -13,7 +14,7 @@ const pageUrl = 'https://www.asboxingfitness.com/boxing-coach-belvedere'
 export const metadata: Metadata = {
   title: {
     absolute:
-      "BEST Boxing Coach Belvedere - if you're looking for 1-to-1 Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be",
+      "BEST Boxing Coach Belvedere - if you're looking for 1-to-1 Boxing Training near me, Boxing Fitness & Conditioning near me or a Personal Trainer near me - AS Boxing & Fitness is the place to be",
   },
   description:
     'Private 1-to-1 boxing coaching in Belvedere, Bexley with active boxer and 3x London Champion Adam Sipika. Beginner-friendly 60-minute sessions from £50. Book on WhatsApp.',
@@ -23,7 +24,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: pageUrl,
-    title: 'Boxing Coach in Belvedere | AS Boxing & Fitness',
+    title:
+      "BEST Boxing Coach Belvedere - if you're looking for 1-to-1 Boxing Training near me, Boxing Fitness & Conditioning near me or a Personal Trainer near me - AS Boxing & Fitness is the place to be",
     description:
       '1-to-1 boxing coaching in Belvedere for beginners, fitness and technical development. Train with active competitive boxer Adam Sipika.',
     images: [
@@ -37,7 +39,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boxing Coach in Belvedere | AS Boxing & Fitness',
+    title:
+      "BEST Boxing Coach Belvedere - if you're looking for 1-to-1 Boxing Training near me, Boxing Fitness & Conditioning near me or a Personal Trainer near me - AS Boxing & Fitness is the place to be",
     description:
       '1-to-1 boxing coaching in Belvedere for beginners, fitness and technical development.',
     images: ['/image.png'],
@@ -82,6 +85,7 @@ const faqs = [
 const localCoachingSchema = {
   '@context': 'https://schema.org',
   '@graph': [
+    professionalServiceSchema(),
     {
       '@type': 'Service',
       '@id': `${pageUrl}#service`,
@@ -157,7 +161,7 @@ export default function BoxingCoachBelvederePage() {
               Boxing Coach Belvedere
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-              Private 1-to-1 boxing coaching in Belvedere for beginners, fitness goals and technical development. Train with Adam Sipika — an active competitive boxer and 3x London Champion.
+              AS Boxing &amp; Fitness provides boxing coaching across Belvedere, at 66 Gilbert Rd, Belvedere, DA17 5DA. Adam Sipika, a 3x London Champion and active competitive boxer, leads each private session, with coaching in English and Polish. A 60-minute one-to-one session is £50, and a five-session bundle is £200. Beginners are welcome, and there is no pressure to spar. Clients also travel from across Bexley. Sessions are appointment-based, and you can message Adam on WhatsApp to ask about a time. The offer is private coaching with clear prices, booked directly with Adam. It is not a scheduled group class, and it does not claim a second venue in Bexley.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -210,7 +214,7 @@ export default function BoxingCoachBelvederePage() {
           </div>
           <div className="space-y-6 text-base leading-7 text-muted-foreground sm:text-lg">
             <p>
-              AS Boxing &amp; Fitness is for people who want focused coaching, whether you are putting on gloves for the first time, building boxing fitness or improving your technique. Every session is one-to-one, so the pace and content are shaped around you.
+              AS Boxing &amp; Fitness is for people who want focused coaching, whether you are putting on gloves for the first time, building <Link href="/boxing-fitness-belvedere" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">boxing fitness</Link> or improving your technique with <Link href="/one-to-one-boxing-coaching" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">1-to-1 boxing coaching</Link>. <Link href="/boxing-for-beginners-belvedere" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">Boxing for beginners</Link> and <Link href="/boxing-personal-trainer-bexley" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">personal training</Link> use the same private format. <Link href="/boxing-coaching-prices" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">Coaching prices</Link> are £50 for 60 minutes.
             </p>
             <p>
               The training base is in Belvedere, with clients travelling from Bexley and the surrounding area. The offer is deliberately different from a scheduled group boxing club: private coaching, transparent pricing and booking directly with Adam on WhatsApp.
@@ -337,6 +341,27 @@ export default function BoxingCoachBelvederePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">At this base</p>
+          <h2
+            className="mt-4 text-4xl font-bold uppercase tracking-tight sm:text-5xl"
+            style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
+          >
+            Services we offer here
+          </h2>
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {servicesInArea.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="font-semibold leading-7 text-foreground underline decoration-primary/60 underline-offset-4 transition-colors hover:text-primary">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

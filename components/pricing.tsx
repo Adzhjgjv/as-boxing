@@ -68,7 +68,7 @@ export function Pricing() {
             className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
             style={{ fontFamily: "var(--font-oswald), sans-serif" }}
           >
-            Training Packages
+            Personal Training Packages
           </h2>
           <p className="text-muted-foreground text-lg">
             Straightforward pricing, no hidden extras. Pay per session or grab the bundle and save.

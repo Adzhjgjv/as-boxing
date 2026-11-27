@@ -88,7 +88,7 @@ export function About() {
                 I started coaching because I wanted to share what I&apos;ve learned in the ring — not just the techniques, but the mindset and the work ethic that goes with it. Whether you want to get fit, lose weight, learn to box properly, or just do something different, I&apos;ll put together sessions that actually challenge you.
               </p>
               <p className="text-foreground font-medium">
-                Based at Belvedere Boxing Club, Bexley. Coaching in English and Polish.
+                AS Boxing & Fitness, 66 Gilbert Rd, Belvedere, DA17 5DA. Coaching in English and Polish.
               </p>
             </div>
 

@@ -9,8 +9,10 @@ import { Testimonials } from '@/components/testimonials'
 import { Pricing } from '@/components/pricing'
 import { Gallery } from '@/components/gallery'
 import { Contact } from '@/components/contact'
+import { Faq } from '@/components/faq'
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
+import { homepageFaqs } from '@/lib/homepage-faq'
 
 const homepageTitle =
   "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching near me, Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be"
@@ -96,6 +98,19 @@ const localBusinessSchema = {
   },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homepageFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen pb-16 lg:pb-0">
@@ -103,6 +118,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <Hero />
       <About />
@@ -111,6 +127,7 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <Gallery />
+      <Faq />
       <Contact />
       <Footer />
       <MobileBooking />

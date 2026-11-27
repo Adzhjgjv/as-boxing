@@ -10,20 +10,23 @@ import { bookingMessages, createWhatsAppLink } from '@/lib/whatsapp'
 
 const pageUrl = 'https://www.asboxingfitness.com/boxing-guides'
 
+const guidesTitle =
+  "BEST Boxing Guides Bexley - if you're looking for Boxing Coaching near me, 1-to-1 Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be"
+
 export const metadata: Metadata = {
-  title: 'Boxing Guides, Coaching Advice & Private Training',
+  title: { absolute: guidesTitle },
   description: 'Beginner boxing guides, private coaching information, technique advice and practical training answers from AS Boxing & Fitness in Belvedere, Bexley.',
   alternates: { canonical: '/boxing-guides' },
   openGraph: {
     type: 'website',
     url: pageUrl,
-    title: 'Boxing Guides & Private Coaching | AS Boxing & Fitness',
+    title: guidesTitle,
     description: 'Clear, beginner-friendly boxing guides and private coaching information from Belvedere, Bexley.',
     images: [{ url: '/image.png', width: 1146, height: 572, alt: 'Adam Sipika boxing in competition' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boxing Guides & Private Coaching | AS Boxing & Fitness',
+    title: guidesTitle,
     description: 'Clear, beginner-friendly boxing guides and private coaching information from Belvedere, Bexley.',
     images: ['/image.png'],
   },
@@ -64,10 +67,10 @@ export default function BoxingGuidesPage() {
             Boxing training library
           </p>
           <h1 className="mt-5 max-w-4xl text-5xl font-bold uppercase leading-[0.92] tracking-tight sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
-            Learn the basics. <span className="text-primary">Train with purpose.</span>
+            Boxing Guides Bexley
           </h1>
           <p className="mt-7 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
-            Clear guides for people considering private boxing coaching in Belvedere and Bexley. Explore beginner questions, technique fundamentals, boxing fitness and practical booking information—then ask Adam about a session when you are ready.
+            AS Boxing &amp; Fitness provides boxing coaching guides for people across Bexley, with private sessions at 66 Gilbert Rd, Belvedere, DA17 5DA. Adam Sipika, a 3x London Champion and active competitive boxer, coaches one-to-one in English and Polish. A 60-minute session is £50 and a five-session bundle is £200. These pages answer practical questions: where training happens, what a beginner needs, how coaching works and what it costs. This is private coaching, not a group boxing club, and there is no separate Bexley venue. Read the guide that matches your question, then message Adam when you want a session. Beginners can start without sparring.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-primary px-6 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90">
@@ -86,7 +89,7 @@ export default function BoxingGuidesPage() {
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Private coaching, local facts</p>
             <h2 className="mt-3 text-3xl font-bold uppercase tracking-tight sm:text-4xl" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>Built for useful questions, not keyword filler</h2>
-            <p className="mt-5 leading-8 text-muted-foreground sm:text-lg">These guides are written around the questions that matter before a private session: where training happens, what a beginner needs, how coaching works, what it costs and how the foundations fit together. AS Boxing &amp; Fitness is based at 66 Gilbert Rd, Belvedere, DA17 5DA; it is a private one-to-one coaching service, not a group boxing club.</p>
+            <p className="mt-5 leading-8 text-muted-foreground sm:text-lg">These guides are written around the questions that matter before a private session: where training happens, what a beginner needs, how coaching works, what it costs and how the foundations fit together. AS Boxing &amp; Fitness is based at 66 Gilbert Rd, Belvedere, DA17 5DA; it is a private one-to-one coaching service, not a group boxing club. For the local pages, see <Link href="/boxing-coach-bexley" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">boxing coaching in Bexley</Link> and <Link href="/boxing-coach-belvedere" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">boxing coaching in Belvedere</Link>.</p>
           </div>
 
           <div className="mt-14 space-y-16">

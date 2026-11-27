@@ -181,6 +181,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Location</h3>
+                  <p className="font-semibold text-foreground">AS Boxing & Fitness</p>
                   <p className="text-muted-foreground">66 Gilbert Rd, Belvedere, DA17 5DA</p>
                 </div>
               </div>
