@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Boxing Guides & Private Coaching | AS Boxing & Fitness',
     description: 'Clear, beginner-friendly boxing guides and private coaching information from Belvedere, Bexley.',
-    images: [{ url: '/image.png', width: 1146, height: 572, alt: 'Adam Sipika boxing in competition' }],
+    images: [{ url: '/image.png', width: 1146, height: 572, alt: 'Boxing in competition' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -67,7 +67,7 @@ export default function BoxingGuidesPage() {
             Learn the basics. <span className="text-primary">Train with purpose.</span>
           </h1>
           <p className="mt-7 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
-            AS Boxing &amp; Fitness provides boxing coaching guides for people across Bexley, with private sessions at 66 Gilbert Rd, Belvedere, DA17 5DA. Adam Sipika, a 3x London Champion and active competitive boxer, coaches one-to-one in English and Polish. A 60-minute session is £50 and a five-session bundle is £200. These pages answer practical questions: where training happens, what a beginner needs, how coaching works and what it costs. This is private coaching, not a group boxing club, and there is no separate Bexley venue. Read the guide that matches your question, then message Adam when you want a session. Beginners can start without sparring.
+            AS Boxing &amp; Fitness provides boxing coaching guides for people across Bexley, with private sessions at 66 Gilbert Rd, Belvedere, DA17 5DA. Your coach, a 3x London Champion and active competitive boxer, coaches one-to-one in English and Polish. A 60-minute session is £50 and a five-session bundle is £200. These pages answer practical questions: where training happens, what a beginner needs, how coaching works and what it costs. This is private coaching, not a group boxing club, and there is no separate Bexley venue. Read the guide that matches your question, then message on WhatsApp when you want a session. Beginners can start without sparring.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-primary px-6 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90">
@@ -123,7 +123,7 @@ export default function BoxingGuidesPage() {
           <div>
             <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-primary"><MapPin className="h-4 w-4" aria-hidden="true" /> Belvedere, Bexley</p>
             <h2 className="mt-3 text-3xl font-bold uppercase tracking-tight sm:text-4xl" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>Ready to try private boxing coaching?</h2>
-            <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">Tell Adam your experience level, goal and likely availability. A standard 60-minute private session is £50; the five-session bundle is £200.</p>
+            <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">Tell your coach your experience level, goal and likely availability. A standard 60-minute private session is £50; the five-session bundle is £200.</p>
           </div>
           <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-primary px-6 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90">
             <MessageCircle className="h-5 w-5" aria-hidden="true" />

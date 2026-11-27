@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "BEST Boxing Coach Belvedere - if you're looking for 1-to-1 Boxing Training near me, Boxing Fitness & Conditioning near me or a Personal Trainer near me - AS Boxing & Fitness is the place to be",
   },
   description:
-    'Private 1-to-1 boxing coaching in Belvedere, Bexley with active boxer and 3x London Champion Adam Sipika. Beginner-friendly 60-minute sessions from £50. Book on WhatsApp.',
+    'Private 1-to-1 boxing coaching in Belvedere, Bexley with an active competitive boxer and 3x London Champion. Beginner-friendly 60-minute sessions from £50. Book on WhatsApp.',
   alternates: {
     canonical: '/boxing-coach-belvedere',
   },
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     title:
       "BEST Boxing Coach Belvedere - if you're looking for 1-to-1 Boxing Training near me, Boxing Fitness & Conditioning near me or a Personal Trainer near me - AS Boxing & Fitness is the place to be",
     description:
-      '1-to-1 boxing coaching in Belvedere for beginners, fitness and technical development. Train with active competitive boxer Adam Sipika.',
+      '1-to-1 boxing coaching in Belvedere for beginners, fitness and technical development. Train with an active competitive boxer and 3x London Champion.',
     images: [
       {
         url: '/image.png',
         width: 1146,
         height: 572,
-        alt: 'Adam Sipika boxing in competition for AS Boxing & Fitness',
+        alt: 'Boxing in competition for AS Boxing & Fitness',
       },
     ],
   },
@@ -73,11 +73,11 @@ const faqs = [
   {
     question: 'Is this suitable if I am coming from Bexley?',
     answer:
-      'Yes. The Belvedere training base is available for clients from across Bexley and the surrounding area. Message Adam on WhatsApp before booking if you would like to check whether the location and session time work for you.',
+      'Yes. The Belvedere training base is available for clients from across Bexley and the surrounding area. Message on WhatsApp before booking if you would like to check whether the location and session time work for you.',
   },
   {
     question: 'How much is a 2-to-1 session?',
-    answer: 'A 2-to-1 session is £70 per hour. Small group sessions and sessions for juniors are also available. No price is listed for those, so message Adam to ask.',
+    answer: 'A 2-to-1 session is £70 per hour. Small group sessions and sessions for juniors are also available. No price is listed for those, so message on WhatsApp to ask.',
   },
   {
     question: 'Is there parking?',
@@ -86,12 +86,12 @@ const faqs = [
   {
     question: 'What qualifications does the coach have?',
     answer:
-      'Adam Sipika is a Level 3 Personal Trainer and a GB Boxing Tutor, and he is fully insured. He is a 3x London Champion and an active competitive boxer with 40+ fights.',
+      'Your coach is a Level 3 Personal Trainer and a GB Boxing Tutor, and is fully insured. Your coach is a 3x London Champion and an active competitive boxer with 40+ fights.',
   },
   {
     question: 'What should I bring to my first session?',
     answer:
-      'Wear comfortable training clothes and trainers, and bring water. If you have gloves or hand wraps, bring them along; if not, ask on WhatsApp before your session and Adam will confirm what you need.',
+      'Wear comfortable training clothes and trainers, and bring water. If you have gloves or hand wraps, bring them along; if not, ask on WhatsApp before your session and your coach will confirm what you need.',
   },
 ]
 
@@ -105,7 +105,7 @@ const localCoachingSchema = {
       name: '1-to-1 Boxing Coaching in Belvedere',
       serviceType: 'Private boxing coaching',
       description:
-        'Private 1-to-1 boxing coaching for beginners and all levels in Belvedere, Bexley. Sessions are led by active competitive boxer Adam Sipika.',
+        'Private 1-to-1 boxing coaching for beginners and all levels in Belvedere, Bexley. Sessions are led by an active competitive boxer and 3x London Champion.',
       url: pageUrl,
       provider: {
         '@id': 'https://www.asboxingfitness.com/#business',
@@ -182,7 +182,7 @@ export default function BoxingCoachBelvederePage() {
               Boxing Coach Belvedere
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-              AS Boxing &amp; Fitness provides boxing coaching across Belvedere, at 66 Gilbert Rd, Belvedere, DA17 5DA. Adam Sipika, a 3x London Champion and active competitive boxer, leads each private session, with coaching in English and Polish. A 60-minute one-to-one session is £50, and a five-session bundle is £200. Beginners are welcome, and there is no pressure to spar. Clients also travel from across Bexley. Sessions are appointment-based, and you can message Adam on WhatsApp to ask about a time. The offer is private coaching with clear prices, booked directly with Adam. It is not a scheduled group class, and it does not claim a second venue in Bexley.
+              AS Boxing &amp; Fitness provides boxing coaching across Belvedere, at 66 Gilbert Rd, Belvedere, DA17 5DA. Your coach, a 3x London Champion and active competitive boxer, leads each private session, with coaching in English and Polish. A 60-minute one-to-one session is £50, and a five-session bundle is £200. Beginners are welcome, and there is no pressure to spar. Clients also travel from across Bexley. Sessions are appointment-based, and you can message on WhatsApp to ask about a time. The offer is private coaching with clear prices, booked directly on WhatsApp. It is not a scheduled group class, and it does not claim a second venue in Bexley.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -207,7 +207,7 @@ export default function BoxingCoachBelvederePage() {
           <div className="relative mx-auto w-full max-w-xl overflow-hidden border border-border bg-card shadow-2xl">
             <Image
               src="/image.png"
-              alt="Adam Sipika boxing in competition"
+              alt="Boxing in competition"
               width={1146}
               height={572}
               className="aspect-[1.55/1] h-full w-full object-cover object-center"
@@ -238,7 +238,7 @@ export default function BoxingCoachBelvederePage() {
               AS Boxing &amp; Fitness is for people who want focused coaching, whether you are putting on gloves for the first time, building <Link href="/boxing-fitness-belvedere" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">boxing fitness</Link> or improving your technique with <Link href="/one-to-one-boxing-coaching" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">1-to-1 boxing coaching</Link>. <Link href="/boxing-for-beginners-belvedere" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">Boxing for beginners</Link> and <Link href="/boxing-personal-trainer-bexley" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">personal training</Link> use the same private format. <Link href="/boxing-coaching-prices" className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary">Coaching prices</Link> are £50 for 60 minutes.
             </p>
             <p>
-              The training base is in Belvedere, with clients travelling from Bexley and the surrounding area. The offer is deliberately different from a scheduled group boxing club: private coaching, transparent pricing and booking directly with Adam on WhatsApp.
+              The training base is in Belvedere, with clients travelling from Bexley and the surrounding area. The offer is deliberately different from a scheduled group boxing club: private coaching, transparent pricing and booking directly on WhatsApp.
             </p>
           </div>
         </div>
@@ -431,7 +431,7 @@ export default function BoxingCoachBelvederePage() {
               className="inline-flex min-h-14 items-center justify-center gap-2 bg-primary px-6 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <MessageCircle className="h-5 w-5" aria-hidden="true" />
-              Message Adam on WhatsApp
+              Message on WhatsApp
             </a>
             <p className="mt-4 text-sm text-muted-foreground">Ask about availability, your goal or what to bring before you book.</p>
           </div>

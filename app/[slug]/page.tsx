@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: '/image.png',
           width: 1146,
           height: 572,
-          alt: 'Adam Sipika boxing in competition for AS Boxing & Fitness',
+          alt: 'Boxing in competition for AS Boxing & Fitness',
         },
       ],
     },
@@ -131,7 +131,7 @@ export default async function SeoPage({ params }: PageProps) {
           mainEntityOfPage: pageUrl,
           datePublished: '2026-10-07',
           dateModified: '2026-10-07',
-          author: { '@type': 'Person', name: 'Adam Sipika' },
+          author: { '@type': 'Organization', name: 'AS Boxing & Fitness', url: 'https://www.asboxingfitness.com/' },
           publisher: { '@id': 'https://www.asboxingfitness.com/#business' },
           image: 'https://www.asboxingfitness.com/image.png',
         }
@@ -253,7 +253,7 @@ export default async function SeoPage({ params }: PageProps) {
 
           <aside className="border border-border bg-card p-6 lg:sticky lg:top-32">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Private coaching</p>
-            <h2 className="mt-3 text-3xl font-bold uppercase leading-none" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>Train with Adam</h2>
+            <h2 className="mt-3 text-3xl font-bold uppercase leading-none" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>Train with your coach</h2>
             <p className="mt-4 leading-7 text-muted-foreground">1-to-1 boxing coaching at 66 Gilbert Rd, Belvedere, DA17 5DA. Beginner-friendly, appointment-based and available in English and Polish.</p>
             <dl className="mt-6 space-y-3 border-y border-border py-5 text-sm">
               <div className="flex items-start justify-between gap-4"><dt className="text-muted-foreground">Single session</dt><dd className="font-semibold">£50 / 60 min</dd></div>

@@ -9,7 +9,7 @@ const features = [
   {
     icon: Shield,
     title: "Coached by a Competitor",
-    description: "I still compete at a high level, so what I teach you is what actually works in the ring — not textbook theory.",
+    description: "Your coach still competes at a high level, so what you learn is what actually works in the ring — not textbook theory.",
   },
   {
     icon: BadgeCheck,
@@ -24,7 +24,7 @@ const features = [
   {
     icon: Users,
     title: "All Levels Welcome",
-    description: "Never thrown a punch before? No problem. I've coached complete beginners and competitive fighters alike. Sessions for juniors are available too.",
+    description: "Never thrown a punch before? No problem. Your coach has worked with complete beginners and competitive fighters alike. Sessions for juniors are available too.",
   },
 ]
 
@@ -78,14 +78,14 @@ export function About() {
               className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-6"
               style={{ fontFamily: 'var(--font-oswald), sans-serif' }}
             >
-              Adam Sipika
+              Your Coach
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I&apos;m Adam — a 3x London Champion and active competitive boxer based in Belvedere, Bexley. I&apos;ve had 40+ fights and I&apos;m still competing, which means the coaching I give you is current, practical and grounded in real experience. I won King of the Ring, a big boxing cup in Sweden, and the Capital Cup.
+                Train with a 3x London Champion and active competitive boxer based in Belvedere, Bexley. Your coach has had 40+ fights and is still competing, which means the coaching is current, practical and grounded in real experience. Wins include King of the Ring, a big boxing cup in Sweden, and the Capital Cup.
               </p>
               <p>
-                I started coaching because I wanted to share what I&apos;ve learned in the ring — not just the techniques, but the mindset and the work ethic that goes with it. Whether you want to get fit, lose weight, learn to box properly, or just do something different, I&apos;ll put together sessions that actually challenge you.
+                Coaching is about sharing what competition has taught — not just the techniques, but the mindset and the work ethic that goes with it. Whether you want to get fit, lose weight, learn to box properly, or just do something different, sessions are put together to actually challenge you.
               </p>
               <p className="text-foreground font-medium">
                 AS Boxing & Fitness, 66 Gilbert Rd, Belvedere, DA17 5DA. Coaching in English and Polish.

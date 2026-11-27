@@ -16,7 +16,7 @@ export const homepageFaqs = [
   {
     question: 'Who coaches the sessions?',
     answer:
-      'Adam Sipika, a 3x London Champion and active competitive boxer. He was No. 2 in England in 2023 and has 40+ fights. He won King of the Ring, a big boxing cup in Sweden, and the Capital Cup. He is a Level 3 Personal Trainer and a GB Boxing Tutor, and he is fully insured.',
+      'Your coach is a 3x London Champion and an active competitive boxer, No. 2 in England in 2023, with 40+ fights. Wins include King of the Ring, a big boxing cup in Sweden, and the Capital Cup. Your coach is a Level 3 Personal Trainer and a GB Boxing Tutor, and is fully insured.',
   },
   {
     question: 'What sessions can I book?',
@@ -29,11 +29,11 @@ export const homepageFaqs = [
   },
   {
     question: 'Are small group sessions available?',
-    answer: 'Yes. Small group sessions are available. No price is listed for them, so message Adam to ask.',
+    answer: 'Yes. Small group sessions are available. No price is listed for them, so message on WhatsApp to ask.',
   },
   {
     question: 'Do you coach juniors?',
-    answer: 'Yes. Sessions for juniors are available. No age range or junior price is listed, so message Adam to ask.',
+    answer: 'Yes. Sessions for juniors are available. No age range or junior price is listed, so message on WhatsApp to ask.',
   },
   {
     question: 'Is there parking?',
@@ -42,6 +42,6 @@ export const homepageFaqs = [
   {
     question: 'What qualifications does the coach have?',
     answer:
-      'Adam Sipika is a Level 3 Personal Trainer and a GB Boxing Tutor, and he is fully insured. He is also a 3x London Champion and an active competitive boxer.',
+      'Your coach is a Level 3 Personal Trainer and a GB Boxing Tutor, and is fully insured. Your coach is also a 3x London Champion and an active competitive boxer.',
   },
 ] as const
