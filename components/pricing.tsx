@@ -27,6 +27,23 @@ const pricingPlans = [
     linkText: "a 60-minute 1-to-1 session",
   },
   {
+    name: "2-to-1 Session",
+    price: "£70",
+    period: "per hour",
+    description: "Two people in the session. The hourly rate is £70.",
+    features: [
+      "£70 per hour",
+      "Two people training together",
+      "Personalised coaching",
+      "Flexible scheduling",
+    ],
+    popular: false,
+    cta: "Book 2-to-1",
+    bookingMessage: bookingMessages.twoToOne,
+    href: "/boxing-coaching-prices",
+    linkText: "2-to-1 boxing training",
+  },
+  {
     name: "5-Session Bundle",
     price: "£200",
     period: "5 sessions",
@@ -75,7 +92,7 @@ export function Pricing() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}

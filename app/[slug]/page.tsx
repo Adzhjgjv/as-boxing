@@ -6,7 +6,7 @@ import { Check, ChevronRight, MapPin, MessageCircle } from 'lucide-react'
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
 import { Navbar } from '@/components/navbar'
-import { areaPageLinks, pageLocalRole, professionalServiceSchema, servicesInArea } from '@/lib/local-seo'
+import { areaPageLinks, originalTitleSlugs, pageLocalRole, professionalServiceSchema, servicesInArea } from '@/lib/local-seo'
 import { seoPageBySlug, seoPages } from '@/lib/seo-pages'
 import { bookingMessages, createWhatsAppLink } from '@/lib/whatsapp'
 
@@ -27,9 +27,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const url = `https://www.asboxingfitness.com/${page.slug}`
+  const useOriginalTitle = originalTitleSlugs.has(page.slug)
 
   return {
-    title: { absolute: page.title },
+    title: useOriginalTitle ? page.title : { absolute: page.title },
     description: page.description,
     alternates: { canonical: `/${page.slug}` },
     openGraph: {
@@ -256,6 +257,7 @@ export default async function SeoPage({ params }: PageProps) {
             <p className="mt-4 leading-7 text-muted-foreground">1-to-1 boxing coaching at 66 Gilbert Rd, Belvedere, DA17 5DA. Beginner-friendly, appointment-based and available in English and Polish.</p>
             <dl className="mt-6 space-y-3 border-y border-border py-5 text-sm">
               <div className="flex items-start justify-between gap-4"><dt className="text-muted-foreground">Single session</dt><dd className="font-semibold">£50 / 60 min</dd></div>
+              <div className="flex items-start justify-between gap-4"><dt className="text-muted-foreground">2-to-1 session</dt><dd className="font-semibold">£70 / hour</dd></div>
               <div className="flex items-start justify-between gap-4"><dt className="text-muted-foreground">Five sessions</dt><dd className="font-semibold">£200</dd></div>
             </dl>
             <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90">

@@ -15,4 +15,6 @@ export const bookingMessages = {
     "Hi Adam, I’d like to book a single 60-minute 1-to-1 boxing session (£50). Please let me know your availability.",
   fiveSessionBundle:
     "Hi Adam, I’d like to book the 5-session bundle (£200). Please let me know how to get started.",
+  twoToOne:
+    "Hi Adam, I’d like to book a 2-to-1 boxing session (£70 per hour). Please let me know your availability.",
 } as const

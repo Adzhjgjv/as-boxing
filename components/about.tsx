@@ -13,8 +13,8 @@ const features = [
   },
   {
     icon: BadgeCheck,
-    title: "Qualified & Certified",
-    description: "Fully certified boxing and fitness coach. Every session is structured, safe and built around your goals.",
+    title: "Qualified & Insured",
+    description: "Level 3 Personal Trainer qualified and GB Boxing Tutor qualified. Fully insured. Every session is structured, safe and built around your goals.",
   },
   {
     icon: Dumbbell,
@@ -24,7 +24,7 @@ const features = [
   {
     icon: Users,
     title: "All Levels Welcome",
-    description: "Never thrown a punch before? No problem. I've coached complete beginners and competitive fighters alike.",
+    description: "Never thrown a punch before? No problem. I've coached complete beginners and competitive fighters alike. Sessions for juniors are available too.",
   },
 ]
 
@@ -57,7 +57,7 @@ export function About() {
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary p-6 sm:p-8">
               <div className="text-4xl sm:text-5xl font-bold text-primary-foreground" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
-                30+
+                40+
               </div>
               <div className="text-sm uppercase tracking-wider text-primary-foreground/80">
                 Fights Experience
@@ -82,7 +82,7 @@ export function About() {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I&apos;m Adam — a 3x London Champion and active competitive boxer based in Belvedere, Bexley. I&apos;ve had over 30 fights and I&apos;m still competing, which means the coaching I give you is current, practical and grounded in real experience.
+                I&apos;m Adam — a 3x London Champion and active competitive boxer based in Belvedere, Bexley. I&apos;ve had 40+ fights and I&apos;m still competing, which means the coaching I give you is current, practical and grounded in real experience. I won King of the Ring, a big boxing cup in Sweden, and the Capital Cup.
               </p>
               <p>
                 I started coaching because I wanted to share what I&apos;ve learned in the ring — not just the techniques, but the mindset and the work ethic that goes with it. Whether you want to get fit, lose weight, learn to box properly, or just do something different, I&apos;ll put together sessions that actually challenge you.

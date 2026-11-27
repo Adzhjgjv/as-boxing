@@ -30,6 +30,7 @@ const services = [
     title: "2-to-1 Boxing Training",
     href: "/private-boxing-training-bexley",
     linkText: "private boxing training in Bexley",
+    price: "£70 per hour",
   },
 ]
 
@@ -84,6 +85,9 @@ export function Services() {
               >
                 {service.title}
               </h2>
+              {"price" in service && service.price ? (
+                <p className="mt-2 text-sm font-semibold text-primary">{service.price}</p>
+              ) : null}
               <Link
                 href={service.href}
                 className="mt-3 inline-block text-sm font-semibold leading-snug text-muted-foreground transition-colors group-hover:text-primary after:absolute after:inset-0"
@@ -95,6 +99,10 @@ export function Services() {
         </div>
 
         <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-6 text-muted-foreground sm:mt-10">
+          Small group sessions are also available, and sessions for juniors are available too.
+        </p>
+
+        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-6 text-muted-foreground">
           Areas we serve:{" "}
           {areaLinks.map((link, index) => (
             <span key={link.href}>

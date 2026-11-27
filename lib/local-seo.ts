@@ -17,6 +17,25 @@ export const servicesInArea = [
   { href: '/boxing-coaching-prices', label: 'boxing coaching prices' },
 ] as const
 
+export const originalTitleSlugs = new Set([
+  'boxing-fitness-training',
+  'boxing-conditioning',
+  'boxing-for-confidence',
+  'boxing-for-weight-loss',
+  'first-boxing-session',
+  'private-boxing-vs-group-classes',
+  'boxing-training-faq',
+  'boxing-gloves-and-hand-wraps',
+  'boxing-stance-for-beginners',
+  'how-to-throw-a-jab',
+  'boxing-footwork-for-beginners',
+  'boxing-guard-basics',
+  'boxing-warm-up',
+  'how-often-should-you-box',
+  'boxing-training-mistakes',
+  'boxing-fitness-workout',
+])
+
 export function pageLocalRole(page: { slug: string; kind: string }): 'area' | 'service' | 'guide' {
   if (page.slug === 'boxing-coach-bexley') return 'area'
   if (page.kind === 'service') return 'service'

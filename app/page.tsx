@@ -89,6 +89,13 @@ const localBusinessSchema = {
       },
       {
         '@type': 'Offer',
+        name: '2-to-1 boxing coaching',
+        price: '70',
+        priceCurrency: 'GBP',
+        url: 'https://wa.me/447946497738?text=Hi%20Adam%2C%20I%E2%80%99d%20like%20to%20book%20a%202-to-1%20boxing%20session%20%28%C2%A370%20per%20hour%29.%20Please%20let%20me%20know%20your%20availability.',
+      },
+      {
+        '@type': 'Offer',
         name: 'Five-session boxing coaching bundle',
         price: '200',
         priceCurrency: 'GBP',

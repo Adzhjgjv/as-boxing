@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 const coachingBenefits = [
   'A full 60-minute one-to-one session built around your level and goal',
   'Technique, pads, movement and boxing fitness — not a generic circuit class',
-  'Coaching from an active competitive boxer with 30+ fights',
+  'Coaching from an active competitive boxer with 40+ fights',
   'Beginner-friendly, with no pressure to spar',
 ]
 
@@ -74,6 +74,19 @@ const faqs = [
     question: 'Is this suitable if I am coming from Bexley?',
     answer:
       'Yes. The Belvedere training base is available for clients from across Bexley and the surrounding area. Message Adam on WhatsApp before booking if you would like to check whether the location and session time work for you.',
+  },
+  {
+    question: 'How much is a 2-to-1 session?',
+    answer: 'A 2-to-1 session is £70 per hour. Small group sessions and sessions for juniors are also available. No price is listed for those, so message Adam to ask.',
+  },
+  {
+    question: 'Is there parking?',
+    answer: 'Yes. Free parking is available at 66 Gilbert Rd, Belvedere, DA17 5DA.',
+  },
+  {
+    question: 'What qualifications does the coach have?',
+    answer:
+      'Adam Sipika is a Level 3 Personal Trainer and a GB Boxing Tutor, and he is fully insured. He is a 3x London Champion and an active competitive boxer with 40+ fights.',
   },
   {
     question: 'What should I bring to my first session?',
@@ -109,6 +122,14 @@ const localCoachingSchema = {
           priceCurrency: 'GBP',
           availability: 'https://schema.org/InStock',
           url: createWhatsAppLink(bookingMessages.belvedereCoaching),
+        },
+        {
+          '@type': 'Offer',
+          name: '2-to-1 boxing coaching',
+          price: '70',
+          priceCurrency: 'GBP',
+          availability: 'https://schema.org/InStock',
+          url: createWhatsAppLink(bookingMessages.twoToOne),
         },
         {
           '@type': 'Offer',
@@ -195,7 +216,7 @@ export default function BoxingCoachBelvederePage() {
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent p-5 sm:p-7">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Coached by a competitor</p>
-              <p className="mt-2 text-lg font-semibold text-white">3x London Champion · No. 2 in England 2023 · 30+ fights</p>
+              <p className="mt-2 text-lg font-semibold text-white">3x London Champion · No. 2 in England 2023 · 40+ fights · King of the Ring, Sweden</p>
             </div>
           </div>
         </div>
@@ -256,7 +277,7 @@ export default function BoxingCoachBelvederePage() {
               Straightforward pricing. No membership required.
             </h2>
           </div>
-          <div className="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-2">
+          <div className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-3">
             <div className="border border-border bg-card p-7 sm:p-8">
               <h3 className="text-2xl font-bold uppercase" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
                 Single session
@@ -271,6 +292,22 @@ export default function BoxingCoachBelvederePage() {
                 className="mt-7 inline-flex w-full items-center justify-center bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Book a £50 session
+              </a>
+            </div>
+            <div className="border border-border bg-card p-7 sm:p-8">
+              <h3 className="text-2xl font-bold uppercase" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
+                2-to-1 session
+              </h3>
+              <p className="mt-3 text-5xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>£70</p>
+              <p className="mt-1 text-sm text-muted-foreground">Per hour, for two people</p>
+              <p className="mt-6 leading-7 text-muted-foreground">Train with one other person. Small group sessions and sessions for juniors are also available. No price is listed for those.</p>
+              <a
+                href={createWhatsAppLink(bookingMessages.twoToOne)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex w-full items-center justify-center border border-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              >
+                Book a £70 session
               </a>
             </div>
             <div className="border border-primary bg-card p-7 sm:p-8">

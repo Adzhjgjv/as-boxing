@@ -10,23 +10,20 @@ import { bookingMessages, createWhatsAppLink } from '@/lib/whatsapp'
 
 const pageUrl = 'https://www.asboxingfitness.com/boxing-guides'
 
-const guidesTitle =
-  "BEST Boxing Guides Bexley - if you're looking for Boxing Coaching near me, 1-to-1 Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be"
-
 export const metadata: Metadata = {
-  title: { absolute: guidesTitle },
+  title: 'Boxing Guides, Coaching Advice & Private Training',
   description: 'Beginner boxing guides, private coaching information, technique advice and practical training answers from AS Boxing & Fitness in Belvedere, Bexley.',
   alternates: { canonical: '/boxing-guides' },
   openGraph: {
     type: 'website',
     url: pageUrl,
-    title: guidesTitle,
+    title: 'Boxing Guides & Private Coaching | AS Boxing & Fitness',
     description: 'Clear, beginner-friendly boxing guides and private coaching information from Belvedere, Bexley.',
     images: [{ url: '/image.png', width: 1146, height: 572, alt: 'Adam Sipika boxing in competition' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: guidesTitle,
+    title: 'Boxing Guides & Private Coaching | AS Boxing & Fitness',
     description: 'Clear, beginner-friendly boxing guides and private coaching information from Belvedere, Bexley.',
     images: ['/image.png'],
   },
@@ -67,7 +64,7 @@ export default function BoxingGuidesPage() {
             Boxing training library
           </p>
           <h1 className="mt-5 max-w-4xl text-5xl font-bold uppercase leading-[0.92] tracking-tight sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
-            Boxing Guides Bexley
+            Learn the basics. <span className="text-primary">Train with purpose.</span>
           </h1>
           <p className="mt-7 max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
             AS Boxing &amp; Fitness provides boxing coaching guides for people across Bexley, with private sessions at 66 Gilbert Rd, Belvedere, DA17 5DA. Adam Sipika, a 3x London Champion and active competitive boxer, coaches one-to-one in English and Polish. A 60-minute session is £50 and a five-session bundle is £200. These pages answer practical questions: where training happens, what a beginner needs, how coaching works and what it costs. This is private coaching, not a group boxing club, and there is no separate Bexley venue. Read the guide that matches your question, then message Adam when you want a session. Beginners can start without sparring.

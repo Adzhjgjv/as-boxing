@@ -7,7 +7,7 @@ export const homepageFaqs = [
   {
     question: 'How much does a session cost?',
     answer:
-      'A 60-minute 1-to-1 session is £50. A five-session bundle is £200, which saves £50 compared with five individual sessions. No joining fee is listed, and there is no membership to join.',
+      'A 60-minute 1-to-1 session is £50. A 2-to-1 session is £70 per hour. A five-session bundle is £200, which saves £50 compared with five individual sessions. No joining fee is listed, and there is no membership to join.',
   },
   {
     question: 'Which languages is coaching available in?',
@@ -16,11 +16,32 @@ export const homepageFaqs = [
   {
     question: 'Who coaches the sessions?',
     answer:
-      'Adam Sipika, a 3x London Champion and active competitive boxer. He was No. 2 in England in 2023 and has over 30 fights.',
+      'Adam Sipika, a 3x London Champion and active competitive boxer. He was No. 2 in England in 2023 and has 40+ fights. He won King of the Ring, a big boxing cup in Sweden, and the Capital Cup. He is a Level 3 Personal Trainer and a GB Boxing Tutor, and he is fully insured.',
   },
   {
     question: 'What sessions can I book?',
     answer:
-      '1-to-1 boxing training, boxing for beginners, boxing fitness and conditioning, and personal training. 2-to-1 boxing training is also listed. Sessions are private, booked by appointment on WhatsApp, and sparring is not required. Beginners are welcome.',
+      '1-to-1 boxing training, boxing for beginners, boxing fitness and conditioning, and personal training. A 2-to-1 session is £70 per hour. Small group sessions and sessions for juniors are also available. Sessions are booked by appointment on WhatsApp, and sparring is not required. Beginners are welcome.',
+  },
+  {
+    question: 'How much is a 2-to-1 session?',
+    answer: 'A 2-to-1 session is £70 per hour.',
+  },
+  {
+    question: 'Are small group sessions available?',
+    answer: 'Yes. Small group sessions are available. No price is listed for them, so message Adam to ask.',
+  },
+  {
+    question: 'Do you coach juniors?',
+    answer: 'Yes. Sessions for juniors are available. No age range or junior price is listed, so message Adam to ask.',
+  },
+  {
+    question: 'Is there parking?',
+    answer: 'Yes. Free parking is available at 66 Gilbert Rd, Belvedere, DA17 5DA.',
+  },
+  {
+    question: 'What qualifications does the coach have?',
+    answer:
+      'Adam Sipika is a Level 3 Personal Trainer and a GB Boxing Tutor, and he is fully insured. He is also a 3x London Champion and an active competitive boxer.',
   },
 ] as const
