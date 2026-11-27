@@ -12,6 +12,7 @@ const navLinks = [
   { href: "/#services", label: "Services" },
   { href: "/boxing-guides", label: "Guides" },
   { href: "/#achievements", label: "Results" },
+  { href: "/#testimonials", label: "Reviews" },
   { href: "/#contact", label: "Contact" },
 ]
 
