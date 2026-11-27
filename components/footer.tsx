@@ -43,7 +43,7 @@ export function Footer() {
   <p className="font-semibold text-foreground">
     AS Boxing &amp; Fitness
   </p>
-  <p>66 Gilbert Road, Belvedere, DA17 5DA</p>
+  <p>66 Gilbert Rd, Belvedere, DA17 5DA</p>
   <p>
     <a href="tel:+447946497738" className="hover:text-primary">
       07946 497738
