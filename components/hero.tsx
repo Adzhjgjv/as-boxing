@@ -81,8 +81,8 @@ export function Hero() {
             {[
               { value: "3X", label: "London Champion" },
               { value: "#2", label: "in England 2023" },
-              { value: "30+", label: "Fights Experience" },
-              { value: "#1", label: "King of the Ring" },
+              { value: "40+", label: "Fights Experience" },
+              { value: "#1", label: "King of the Ring, Sweden" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
                                   <div className="text-4xl sm:text-6xl font-bold text-primary" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>

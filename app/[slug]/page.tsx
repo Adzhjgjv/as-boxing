@@ -6,6 +6,7 @@ import { Check, ChevronRight, MapPin, MessageCircle } from 'lucide-react'
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
 import { Navbar } from '@/components/navbar'
+import { areaPageLinks, originalTitleSlugs, pageLocalRole, professionalServiceSchema, servicesInArea } from '@/lib/local-seo'
 import { seoPageBySlug, seoPages } from '@/lib/seo-pages'
 import { bookingMessages, createWhatsAppLink } from '@/lib/whatsapp'
 
@@ -26,9 +27,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const url = `https://www.asboxingfitness.com/${page.slug}`
+  const useOriginalTitle = originalTitleSlugs.has(page.slug)
 
   return {
-    title: page.title,
+    title: useOriginalTitle ? page.title : { absolute: page.title },
     description: page.description,
     alternates: { canonical: `/${page.slug}` },
     openGraph: {
@@ -61,6 +63,27 @@ function toLabel(slug: string) {
     .join(' ')
 }
 
+function RichText({ text }: { text: string }) {
+  const pattern = /\[([^\]]+)\]\((\/[^)\s]+)\)/g
+  const nodes: React.ReactNode[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > lastIndex) nodes.push(text.slice(lastIndex, match.index))
+    const href = match[2]
+    nodes.push(
+      <Link key={`${href}-${match.index}`} href={href} className="font-medium text-foreground underline decoration-primary/60 underline-offset-4 transition-colors hover:text-primary">
+        {match[1]}
+      </Link>,
+    )
+    lastIndex = match.index + match[0].length
+  }
+
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex))
+  return <>{nodes}</>
+}
+
 export default async function SeoPage({ params }: PageProps) {
   const { slug } = await params
   const page = seoPageBySlug[slug]
@@ -72,6 +95,10 @@ export default async function SeoPage({ params }: PageProps) {
   const pageUrl = `https://www.asboxingfitness.com/${page.slug}`
   const bookingLink = createWhatsAppLink(bookingMessages.firstSession)
   const relatedPages = page.related.map((relatedSlug) => seoPageBySlug[relatedSlug]).filter(Boolean)
+  const localRole = pageLocalRole(page)
+  const localLinks = (localRole === 'area' ? servicesInArea : localRole === 'service' ? areaPageLinks : []).filter(
+    (link) => link.href !== `/${page.slug}`,
+  )
   const contentSchema =
     page.kind === 'service'
       ? {
@@ -130,6 +157,9 @@ export default async function SeoPage({ params }: PageProps) {
   return (
     <main className="min-h-screen pb-16 lg:pb-0">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contentSchema) }} />
+      {localRole === 'area' ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', ...professionalServiceSchema() }) }} />
+      ) : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {page.kind === 'faq' ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} /> : null}
       <Navbar />
@@ -171,7 +201,7 @@ export default async function SeoPage({ params }: PageProps) {
               <section key={section.heading}>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">{page.category}</p>
                 <h2 className="mt-3 text-3xl font-bold uppercase tracking-tight sm:text-4xl" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>{section.heading}</h2>
-                <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">{section.body}</p>
+                <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg"><RichText text={section.body} /></p>
               </section>
             ))}
 
@@ -201,6 +231,24 @@ export default async function SeoPage({ params }: PageProps) {
                 ))}
               </div>
             </section>
+
+            {localLinks.length > 0 ? (
+              <section>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">{localRole === 'area' ? 'At this base' : 'Nearby'}</p>
+                <h2 className="mt-3 text-3xl font-bold uppercase tracking-tight sm:text-4xl" style={{ fontFamily: 'var(--font-oswald), sans-serif' }}>
+                  {localRole === 'area' ? 'Services we offer here' : 'We also serve these areas'}
+                </h2>
+                <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {localLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="inline-flex font-semibold leading-7 text-foreground underline decoration-primary/60 underline-offset-4 transition-colors hover:text-primary">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
           </div>
 
           <aside className="border border-border bg-card p-6 lg:sticky lg:top-32">
@@ -209,6 +257,7 @@ export default async function SeoPage({ params }: PageProps) {
             <p className="mt-4 leading-7 text-muted-foreground">1-to-1 boxing coaching at 66 Gilbert Rd, Belvedere, DA17 5DA. Beginner-friendly, appointment-based and available in English and Polish.</p>
             <dl className="mt-6 space-y-3 border-y border-border py-5 text-sm">
               <div className="flex items-start justify-between gap-4"><dt className="text-muted-foreground">Single session</dt><dd className="font-semibold">£50 / 60 min</dd></div>
+              <div className="flex items-start justify-between gap-4"><dt className="text-muted-foreground">2-to-1 session</dt><dd className="font-semibold">£70 / hour</dd></div>
               <div className="flex items-start justify-between gap-4"><dt className="text-muted-foreground">Five sessions</dt><dd className="font-semibold">£200</dd></div>
             </dl>
             <a href={bookingLink} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex w-full items-center justify-center gap-2 bg-primary px-5 py-3 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-primary/90">

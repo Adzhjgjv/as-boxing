@@ -30,6 +30,7 @@ const services = [
     title: "2-to-1 Boxing Training",
     href: "/private-boxing-training-bexley",
     linkText: "private boxing training in Bexley",
+    price: "£70 per hour",
   },
 ]
 
@@ -59,7 +60,7 @@ export function Services() {
             className="text-4xl sm:text-5xl font-bold uppercase tracking-tight mt-4 mb-4"
             style={{ fontFamily: "var(--font-oswald), sans-serif" }}
           >
-         1-to-1 Boxing Training &amp; <span className="text-primary">Boxing Fitness</span>
+            Personal Training
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg">
             Personal boxing coaching for every level and every goal.
@@ -78,12 +79,15 @@ export function Services() {
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
               </div>
-              <h3
+              <h2
                 className="text-lg sm:text-xl font-bold uppercase tracking-tight"
                 style={{ fontFamily: "var(--font-oswald), sans-serif" }}
               >
                 {service.title}
-              </h3>
+              </h2>
+              {"price" in service && service.price ? (
+                <p className="mt-2 text-sm font-semibold text-primary">{service.price}</p>
+              ) : null}
               <Link
                 href={service.href}
                 className="mt-3 inline-block text-sm font-semibold leading-snug text-muted-foreground transition-colors group-hover:text-primary after:absolute after:inset-0"
@@ -95,6 +99,10 @@ export function Services() {
         </div>
 
         <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-6 text-muted-foreground sm:mt-10">
+          Small group sessions are also available, and sessions for juniors are available too.
+        </p>
+
+        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-6 text-muted-foreground">
           Areas we serve:{" "}
           {areaLinks.map((link, index) => (
             <span key={link.href}>

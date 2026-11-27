@@ -2,13 +2,15 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Crown, Medal, Swords } from "lucide-react"
+import { Crown, Medal, Swords, Trophy } from "lucide-react"
 import Image from "next/image"
 
 const achievements = [
   { icon: Crown, title: "3x London Champion" },
   { icon: Medal, title: "No. 2 in England" },
   { icon: Swords, title: "Active Competitor" },
+  { icon: Trophy, title: "King of the Ring, Sweden" },
+  { icon: Trophy, title: "Capital Cup" },
 ]
 
 export function Achievements() {
@@ -49,7 +51,7 @@ export function Achievements() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-6 max-w-5xl mx-auto">
           {achievements.map((achievement, index) => (
             <motion.div
               key={achievement.title}

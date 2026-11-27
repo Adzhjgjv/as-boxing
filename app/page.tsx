@@ -9,8 +9,10 @@ import { Testimonials } from '@/components/testimonials'
 import { Pricing } from '@/components/pricing'
 import { Gallery } from '@/components/gallery'
 import { Contact } from '@/components/contact'
+import { Faq } from '@/components/faq'
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
+import { homepageFaqs } from '@/lib/homepage-faq'
 
 const homepageTitle =
   "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching near me, Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be"
@@ -87,6 +89,13 @@ const localBusinessSchema = {
       },
       {
         '@type': 'Offer',
+        name: '2-to-1 boxing coaching',
+        price: '70',
+        priceCurrency: 'GBP',
+        url: 'https://wa.me/447946497738?text=Hi%20Adam%2C%20I%E2%80%99d%20like%20to%20book%20a%202-to-1%20boxing%20session%20%28%C2%A370%20per%20hour%29.%20Please%20let%20me%20know%20your%20availability.',
+      },
+      {
+        '@type': 'Offer',
         name: 'Five-session boxing coaching bundle',
         price: '200',
         priceCurrency: 'GBP',
@@ -96,6 +105,19 @@ const localBusinessSchema = {
   },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homepageFaqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen pb-16 lg:pb-0">
@@ -103,6 +125,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <Hero />
       <About />
@@ -111,6 +134,7 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <Gallery />
+      <Faq />
       <Contact />
       <Footer />
       <MobileBooking />
