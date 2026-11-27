@@ -22,7 +22,7 @@ export const seoPages: SeoPage[] = [
     h1: 'Private boxing coaching for clients from Bexley',
     standfirst: 'A focused one-to-one option for adults who want personal boxing coaching, not a crowded group class. Sessions take place at the AS Boxing & Fitness Belvedere base.',
     sections: [
-      { heading: 'A clear Bexley route to private coaching', body: 'If you are searching for a boxing coach in Bexley, it is useful to know exactly where you will train. AS Boxing & Fitness is based at 66 Gilbert Rd in Belvedere, rather than claiming a separate Bexley venue. That gives you a direct route to an appointment-based, private session with Adam Sipika.' },
+      { heading: 'A clear Bexley route to private coaching', body: 'If you are searching for a boxing coach in Bexley, it is useful to know exactly where you will train. AS Boxing & Fitness is based at 66 Gilbert Rd, Belvedere, DA17 5DA, rather than claiming a separate Bexley venue. That gives you a direct route to an appointment-based, private session with Adam Sipika.' },
       { heading: 'Coaching designed around your starting point', body: 'A 60-minute session can focus on stance, punches, padwork, footwork and boxing fitness. Complete beginners can begin slowly and ask questions; people who already train can use the session to improve technique, rhythm and conditioning.' },
       { heading: 'Who private training suits', body: 'One-to-one coaching works well when you want immediate correction, flexible appointment availability and a session tied to a specific goal. There is no pressure to spar, compete or follow a group timetable.' },
     ],
@@ -129,7 +129,7 @@ export const seoPages: SeoPage[] = [
     takeaways: ['Personal coaching with boxing-specific training.', 'Real Belvedere training base.', 'Private £50 single session or £200 five-session bundle.', 'English and Polish available.'],
     faqs: [
       { question: 'Is this personal training or boxing coaching?', answer: 'It is private boxing coaching that can be tailored to a fitness or personal-training goal.' },
-      { question: 'Where is the session held?', answer: 'At the Belvedere training base, 66 Gilbert Rd, DA17 5DA.' },
+      { question: 'Where is the session held?', answer: 'At the Belvedere training base, 66 Gilbert Rd, Belvedere, DA17 5DA.' },
     ],
     related: ['boxing-coach-bexley', 'boxing-fitness-belvedere', 'boxing-coaching-prices'],
   },
