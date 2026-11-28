@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Boxing Guides & Private Coaching | AS Boxing & Fitness',
     description: 'Clear, beginner-friendly boxing guides and private coaching information from Belvedere, Bexley.',
-    images: [{ url: '/image.png', width: 1146, height: 572, alt: 'Boxing in competition' }],
+    images: [{ url: '/image.webp', width: 1146, height: 572, alt: 'Boxing in competition' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Boxing Guides & Private Coaching | AS Boxing & Fitness',
     description: 'Clear, beginner-friendly boxing guides and private coaching information from Belvedere, Bexley.',
-    images: ['/image.png'],
+    images: ['/image.webp'],
   },
 }
 

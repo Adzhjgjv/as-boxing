@@ -1,7 +1,20 @@
 export const businessName = 'AS Boxing & Fitness'
-export const businessAddressLine = '66 Gilbert Rd, Belvedere, DA17 5DA'
+export const businessPhoneDisplay = '07946 497738'
 export const businessPhoneTel = '+447946497738'
+export const businessStreetAddress = 'Belvedere Boxing Club, 66 Gilbert Rd'
+export const businessLocality = 'Belvedere'
+export const businessPostalCode = 'DA17 5DA'
+export const businessCountry = 'GB'
+export const businessAddressLine = `${businessStreetAddress}, ${businessLocality} ${businessPostalCode}`
+export const businessNap = `${businessName}, ${businessAddressLine}, ${businessPhoneDisplay}`
+export const instagramUrl = 'https://www.instagram.com/as.boxingfitness/'
 export const businessId = 'https://www.asboxingfitness.com/#business'
+
+export const areaServed = [
+  { '@type': 'AdministrativeArea', name: 'Bexley' },
+  { '@type': 'City', name: 'Erith' },
+  { '@type': 'City', name: 'Belvedere' },
+]
 
 export const areaPageLinks = [
   { href: '/boxing-coach-bexley', label: 'Boxing Coach Bexley' },
@@ -48,23 +61,20 @@ export function professionalServiceSchema() {
     '@id': businessId,
     name: businessName,
     url: 'https://www.asboxingfitness.com/',
-    image: 'https://www.asboxingfitness.com/image.png',
-    logo: 'https://www.asboxingfitness.com/logo.png',
-    telephone: businessPhoneTel,
+    image: 'https://www.asboxingfitness.com/image.webp',
+    logo: 'https://www.asboxingfitness.com/logo.webp',
+    telephone: businessPhoneDisplay,
     email: 'as.boxingfitness@icloud.com',
-    priceRange: '££',
+    priceRange: '£50–£200',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '66 Gilbert Rd',
-      addressLocality: 'Belvedere',
+      streetAddress: businessStreetAddress,
+      addressLocality: businessLocality,
       addressRegion: 'Bexley',
-      postalCode: 'DA17 5DA',
-      addressCountry: 'GB',
+      postalCode: businessPostalCode,
+      addressCountry: businessCountry,
     },
-    areaServed: [
-      { '@type': 'AdministrativeArea', name: 'Bexley' },
-      { '@type': 'City', name: 'Belvedere' },
-      { '@type': 'City', name: 'London' },
-    ],
+    areaServed,
+    sameAs: [instagramUrl],
   }
 }

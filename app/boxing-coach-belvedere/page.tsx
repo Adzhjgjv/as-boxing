@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import { PictureImage } from '@/components/picture-image'
 import Link from 'next/link'
 import { Check, MapPin, MessageCircle, ShieldCheck, Target } from 'lucide-react'
 
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
 import { Navbar } from '@/components/navbar'
-import { professionalServiceSchema, servicesInArea } from '@/lib/local-seo'
+import { areaServed, professionalServiceSchema, servicesInArea } from '@/lib/local-seo'
 import { bookingMessages, createWhatsAppLink } from '@/lib/whatsapp'
 
 const pageUrl = 'https://www.asboxingfitness.com/boxing-coach-belvedere'
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       '1-to-1 boxing coaching in Belvedere for beginners, fitness and technical development. Train with an active competitive boxer and 3x London Champion.',
     images: [
       {
-        url: '/image.png',
+        url: '/image.webp',
         width: 1146,
         height: 572,
         alt: 'Boxing in competition for AS Boxing & Fitness',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "BEST Boxing Coach Belvedere - if you're looking for 1-to-1 Boxing Training near me, Boxing Fitness & Conditioning near me or a Personal Trainer near me - AS Boxing & Fitness is the place to be",
     description:
       '1-to-1 boxing coaching in Belvedere for beginners, fitness and technical development.',
-    images: ['/image.png'],
+    images: ['/image.webp'],
   },
 }
 
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: 'Is this suitable if I am coming from Bexley?',
     answer:
-      'Yes. The Belvedere training base is available for clients from across Bexley and the surrounding area. Message on WhatsApp before booking if you would like to check whether the location and session time work for you.',
+      'Yes. The Belvedere training base is available for clients from across Bexley, including Erith, and the surrounding area. Message on WhatsApp before booking if you would like to check whether the location and session time work for you.',
   },
   {
     question: 'How much is a 2-to-1 session?',
@@ -110,10 +110,7 @@ const localCoachingSchema = {
       provider: {
         '@id': 'https://www.asboxingfitness.com/#business',
       },
-      areaServed: [
-        { '@type': 'City', name: 'Belvedere' },
-        { '@type': 'AdministrativeArea', name: 'Bexley' },
-      ],
+      areaServed,
       offers: [
         {
           '@type': 'Offer',
@@ -165,6 +162,7 @@ export default function BoxingCoachBelvederePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localCoachingSchema) }}
       />
+      <link rel="preload" as="image" href="/image.avif" type="image/avif" fetchPriority="high" />
       <Navbar />
 
       <section className="relative overflow-hidden border-b border-border pt-36 sm:pt-44">
@@ -182,7 +180,7 @@ export default function BoxingCoachBelvederePage() {
               Boxing Coach Belvedere
             </h1>
             <p className="mt-7 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-              AS Boxing &amp; Fitness provides boxing coaching across Belvedere, at 66 Gilbert Rd, Belvedere, DA17 5DA. Your coach, a 3x London Champion and active competitive boxer, leads each private session, with coaching in English and Polish. A 60-minute one-to-one session is £50, and a five-session bundle is £200. Beginners are welcome, and there is no pressure to spar. Clients also travel from across Bexley. Sessions are appointment-based, and you can message on WhatsApp to ask about a time. The offer is private coaching with clear prices, booked directly on WhatsApp. It is not a scheduled group class, and it does not claim a second venue in Bexley.
+              AS Boxing &amp; Fitness provides boxing coaching across Belvedere, at 66 Gilbert Rd, Belvedere, DA17 5DA. Your coach, a 3x London Champion and active competitive boxer, leads each private session, with coaching in English and Polish. A 60-minute one-to-one session is £50, and a five-session bundle is £200. Beginners are welcome, and there is no pressure to spar. Clients also travel from across Bexley and Erith. Sessions are appointment-based, and you can message on WhatsApp to ask about a time. The offer is private coaching with clear prices, booked directly on WhatsApp. It is not a scheduled group class, and it does not claim a second venue in Bexley.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
@@ -205,13 +203,15 @@ export default function BoxingCoachBelvederePage() {
           </div>
 
           <div className="relative mx-auto w-full max-w-xl overflow-hidden border border-border bg-card shadow-2xl">
-            <Image
-              src="/image.png"
+            <PictureImage
+              webpSrc="/image.webp"
+              avifSrc="/image.avif"
               alt="Boxing in competition"
               width={1146}
               height={572}
               className="aspect-[1.55/1] h-full w-full object-cover object-center"
-              priority
+              loading="eager"
+              fetchPriority="high"
               sizes="(max-width: 1024px) 100vw, 42vw"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent p-5 sm:p-7">
@@ -334,7 +334,7 @@ export default function BoxingCoachBelvederePage() {
       <section className="border-y border-border bg-secondary/30 py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Belvedere base, Bexley catchment</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Belvedere base, Bexley and Erith catchment</p>
             <h2
               className="mt-4 text-4xl font-bold uppercase tracking-tight sm:text-5xl"
               style={{ fontFamily: 'var(--font-oswald), sans-serif' }}

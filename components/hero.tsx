@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
-import Image from "next/image"
+import Link from "next/link"
+import { PictureImage } from "@/components/picture-image"
 import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 export function Hero() {
@@ -10,12 +11,15 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image
-          src="/image.png"
+        <PictureImage
+          webpSrc="/image.webp"
+          avifSrc="/image.avif"
           alt="Boxing in competition"
           fill
           className="object-cover object-[78%_center] sm:object-right"
-          priority
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/65 sm:bg-black/20" />
       </div>
@@ -51,7 +55,11 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base sm:text-xl text-white/90 max-w-2xl mb-8 sm:mb-10 leading-relaxed"
           >
-            AS Boxing &amp; Fitness provides one-to-one boxing coaching and boxing personal training for clients across Bexley, from Belvedere Boxing Club at 66 Gilbert Rd, Belvedere, DA17 5DA. Coaching is led by a 3x London Champion and active competitive boxer. Sessions are in English and Polish.
+            AS Boxing &amp; Fitness provides one-to-one boxing coaching and a{" "}
+            <Link href="/boxing-personal-trainer-bexley" className="underline decoration-primary/70 underline-offset-4 transition-colors hover:text-primary">
+              personal trainer in Bexley
+            </Link>{" "}
+            for clients across Bexley and Erith, from Belvedere Boxing Club at 66 Gilbert Rd, Belvedere, DA17 5DA. Coaching is led by a 3x London Champion and active competitive boxer. Sessions are in English and Polish.
           </motion.p>
 
           <motion.div

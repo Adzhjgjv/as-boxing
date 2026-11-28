@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { Shield, BadgeCheck, Dumbbell, Users } from "lucide-react"
+import { businessAddressLine, businessName } from "@/lib/local-seo"
 
 const features = [
   {
@@ -88,7 +89,7 @@ export function About() {
                 Coaching is about sharing what competition has taught — not just the techniques, but the mindset and the work ethic that goes with it. Whether you want to get fit, lose weight, learn to box properly, or just do something different, sessions are put together to actually challenge you.
               </p>
               <p className="text-foreground font-medium">
-                AS Boxing & Fitness, 66 Gilbert Rd, Belvedere, DA17 5DA. Coaching in English and Polish.
+                {businessName}, {businessAddressLine}. Coaching in English and Polish.
               </p>
             </div>
 
