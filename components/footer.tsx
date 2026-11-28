@@ -1,12 +1,14 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { Instagram, MessageCircle, Phone, Mail } from "lucide-react"
+import { PictureImage } from "@/components/picture-image"
+import { businessAddressLine, businessName, businessPhoneDisplay, businessPhoneTel } from "@/lib/local-seo"
 
 const footerLinks = [
   { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
+  { href: "/boxing-personal-trainer-bexley", label: "Personal Trainer" },
   { href: "/boxing-coach-belvedere", label: "Boxing Coach" },
   { href: "/boxing-guides", label: "Boxing Guides" },
   { href: "/#achievements", label: "Achievements" },
@@ -29,27 +31,29 @@ export function Footer() {
           {/* Logo */}
           <div>
             <Link href="/" className="inline-block">
-              <Image
-                src="/logo.png"
+              <PictureImage
+                webpSrc="/logo.webp"
+                avifSrc="/logo.avif"
                 alt="AS Boxing & Fitness"
-                width={140}
-                height={120}
+                width={768}
+                height={512}
                 className="h-20 w-auto"
               />
             </Link>
             <p className="text-muted-foreground text-sm mt-2">
               1-to-1 boxing coaching in Belvedere, Bexley. Coached by an active competitor.
-            </p><address className="not-italic text-muted-foreground text-sm mt-4 space-y-1">
-  <p className="font-semibold text-foreground">
-    AS Boxing &amp; Fitness
-  </p>
-  <p>66 Gilbert Rd, Belvedere, DA17 5DA</p>
-  <p>
-    <a href="tel:+447946497738" className="hover:text-primary">
-      07946 497738
-    </a>
-  </p>
-</address>
+            </p>
+            <address className="not-italic text-muted-foreground text-sm mt-4">
+              <p>
+                <span className="font-semibold text-foreground">{businessName}</span>
+                {", "}
+                {businessAddressLine}
+                {", "}
+                <a href={`tel:${businessPhoneTel}`} className="hover:text-primary">
+                  {businessPhoneDisplay}
+                </a>
+              </p>
+            </address>
           </div>
 
           {/* Links */}

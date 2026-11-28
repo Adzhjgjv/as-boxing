@@ -13,6 +13,7 @@ import { Faq } from '@/components/faq'
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
 import { homepageFaqs } from '@/lib/homepage-faq'
+import { businessPhoneDisplay, professionalServiceSchema } from '@/lib/local-seo'
 
 const homepageTitle =
   "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching near me, Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be"
@@ -31,48 +32,17 @@ export const metadata: Metadata = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  '@id': 'https://www.asboxingfitness.com/#business',
-  name: 'AS Boxing & Fitness',
-  url: 'https://www.asboxingfitness.com/',
-  image: 'https://www.asboxingfitness.com/image.png',
-  logo: 'https://www.asboxingfitness.com/logo.png',
+  ...professionalServiceSchema(),
   description:
     '1-to-1 boxing coaching in Belvedere, Bexley with an active competitive boxer and 3x London Champion. Beginner-friendly boxing, fitness and skills coaching.',
-  telephone: '+447946497738',
-  email: 'as.boxingfitness@icloud.com',
-  priceRange: '££',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '66 Gilbert Rd',
-    addressLocality: 'Belvedere',
-    addressRegion: 'Bexley',
-    postalCode: 'DA17 5DA',
-    addressCountry: 'GB',
-  },
   geo: {
     '@type': 'GeoCoordinates',
     latitude: 51.4915113,
     longitude: 0.1459151,
   },
-  areaServed: [
-    {
-      '@type': 'AdministrativeArea',
-      name: 'Bexley',
-    },
-    {
-      '@type': 'City',
-      name: 'Belvedere',
-    },
-    {
-      '@type': 'City',
-      name: 'London',
-    },
-  ],
-  sameAs: ['https://www.instagram.com/as.boxingfitness/'],
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+447946497738',
+    telephone: businessPhoneDisplay,
     contactType: 'bookings',
     availableLanguage: ['English', 'Polish'],
   },
@@ -126,6 +96,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <link rel="preload" as="image" href="/image.avif" type="image/avif" fetchPriority="high" />
       <Navbar />
       <Hero />
       <About />

@@ -38,7 +38,7 @@ default: "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching n
       '1-to-1 boxing coaching with an active competitive boxer and 3x London Champion. Book a session in Belvedere, Bexley.',
     images: [
       {
-        url: '/image.png',
+        url: '/image.webp',
         width: 1146,
         height: 572,
         alt: 'Boxing in competition for AS Boxing & Fitness',
@@ -50,7 +50,7 @@ default: "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching n
     title: "BEST Personal Trainer Bexley - if you're looking for Boxing Coaching near me, Boxing Training near me or Boxing Fitness & Conditioning near me - AS Boxing & Fitness is the place to be",
     description:
       '1-to-1 boxing coaching with an active competitive boxer and 3x London Champion.',
-    images: ['/image.png'],
+    images: ['/image.webp'],
   },
   robots: {
     index: true,

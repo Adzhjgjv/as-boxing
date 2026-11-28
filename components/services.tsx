@@ -112,6 +112,7 @@ export function Services() {
               </Link>
             </span>
           ))}
+          <span> · Erith</span>
         </p>
 
         <motion.div

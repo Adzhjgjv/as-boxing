@@ -4,12 +4,13 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
+import { PictureImage } from "@/components/picture-image"
 import { bookingMessages, createWhatsAppLink } from "@/lib/whatsapp"
 
 const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
+  { href: "/boxing-personal-trainer-bexley", label: "Personal Trainer" },
   { href: "/boxing-guides", label: "Guides" },
   { href: "/#achievements", label: "Results" },
   { href: "/#testimonials", label: "Reviews" },
@@ -58,13 +59,14 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-28 items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image
-              src="/logo.png"
+            <PictureImage
+              webpSrc="/logo.webp"
+              avifSrc="/logo.avif"
               alt="AS Boxing & Fitness"
-              width={140}
-              height={120}
+              width={768}
+              height={512}
               className="h-28 w-auto"
-              priority
+              loading="eager"
             />
           </Link>
 

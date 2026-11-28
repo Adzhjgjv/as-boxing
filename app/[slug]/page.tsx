@@ -6,7 +6,7 @@ import { Check, ChevronRight, MapPin, MessageCircle } from 'lucide-react'
 import { Footer } from '@/components/footer'
 import { MobileBooking } from '@/components/mobile-booking'
 import { Navbar } from '@/components/navbar'
-import { areaPageLinks, originalTitleSlugs, pageLocalRole, professionalServiceSchema, servicesInArea } from '@/lib/local-seo'
+import { areaPageLinks, areaServed, originalTitleSlugs, pageLocalRole, professionalServiceSchema, servicesInArea } from '@/lib/local-seo'
 import { seoPageBySlug, seoPages } from '@/lib/seo-pages'
 import { bookingMessages, createWhatsAppLink } from '@/lib/whatsapp'
 
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: page.description,
       images: [
         {
-          url: '/image.png',
+          url: '/image.webp',
           width: 1146,
           height: 572,
           alt: 'Boxing in competition for AS Boxing & Fitness',
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: 'summary_large_image',
       title: page.title,
       description: page.description,
-      images: ['/image.png'],
+      images: ['/image.webp'],
     },
   }
 }
@@ -110,10 +110,7 @@ export default async function SeoPage({ params }: PageProps) {
           serviceType: 'Private boxing coaching',
           url: pageUrl,
           provider: { '@id': 'https://www.asboxingfitness.com/#business' },
-          areaServed: [
-            { '@type': 'City', name: 'Belvedere' },
-            { '@type': 'AdministrativeArea', name: 'Bexley' },
-          ],
+          areaServed,
           offers: {
             '@type': 'Offer',
             price: '50',
@@ -133,7 +130,7 @@ export default async function SeoPage({ params }: PageProps) {
           dateModified: '2026-10-07',
           author: { '@type': 'Organization', name: 'AS Boxing & Fitness', url: 'https://www.asboxingfitness.com/' },
           publisher: { '@id': 'https://www.asboxingfitness.com/#business' },
-          image: 'https://www.asboxingfitness.com/image.png',
+          image: 'https://www.asboxingfitness.com/image.webp',
         }
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -246,6 +243,11 @@ export default async function SeoPage({ params }: PageProps) {
                       </Link>
                     </li>
                   ))}
+                  {localRole === 'service' ? (
+                    <li>
+                      <span className="inline-flex font-semibold leading-7 text-foreground">Erith</span>
+                    </li>
+                  ) : null}
                 </ul>
               </section>
             ) : null}

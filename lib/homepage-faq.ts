@@ -1,8 +1,10 @@
+import { businessAddressLine, businessName } from '@/lib/local-seo'
+
 export const homepageFaqs = [
   {
     question: 'Where is AS Boxing & Fitness?',
     answer:
-      'AS Boxing & Fitness is at 66 Gilbert Rd, Belvedere, DA17 5DA. Private coaching is based there for clients across Bexley, including Belvedere. AS Boxing & Fitness does not claim a separate venue in Bexley.',
+      `${businessName} is at ${businessAddressLine}. Private coaching is based there for clients across Bexley, including Belvedere and Erith. ${businessName} does not claim a separate venue in Bexley.`,
   },
   {
     question: 'How much does a session cost?',

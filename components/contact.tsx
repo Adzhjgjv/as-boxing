@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef, useState } from "react"
 import { MapPin, Phone, Mail, MessageCircle, Instagram, Send } from "lucide-react"
+import { businessAddressLine, businessName, businessPhoneDisplay, businessPhoneTel } from "@/lib/local-seo"
 
 export function Contact() {
   const ref = useRef(null)
@@ -181,8 +182,15 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                  <p className="font-semibold text-foreground">AS Boxing & Fitness</p>
-                  <p className="text-muted-foreground">66 Gilbert Rd, Belvedere, DA17 5DA</p>
+                  <p className="text-muted-foreground">
+                    <span className="font-semibold text-foreground">{businessName}</span>
+                    {", "}
+                    {businessAddressLine}
+                    {", "}
+                    <a href={`tel:${businessPhoneTel}`} className="hover:text-primary transition-colors">
+                      {businessPhoneDisplay}
+                    </a>
+                  </p>
                   <p className="text-muted-foreground">Free parking available</p>
                 </div>
               </div>
@@ -193,8 +201,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <a href="tel:+447946497738" className="text-muted-foreground hover:text-primary transition-colors">
-                    07946 497738
+                  <a href={`tel:${businessPhoneTel}`} className="text-muted-foreground hover:text-primary transition-colors">
+                    {businessPhoneDisplay}
                   </a>
                 </div>
               </div>
@@ -237,14 +245,14 @@ export function Contact() {
             {/* Map */}
             <div className="relative aspect-video bg-card border border-border overflow-hidden">
               <iframe
-                src="https://www.google.com/maps?q=66+Gilbert+Rd,+Belvedere,+DA17+5DA&output=embed"
+                src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!3m2!1m1!4s5091563003234848869"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="AS Boxing & Fitness Location"
+                title="AS Boxing & Fitness on Google Maps"
               />
             </div>
           </motion.div>
